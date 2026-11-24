@@ -1,6 +1,8 @@
 """Connect the shared SAC trainer to Frozen SmolVLA + (Dynamic) LIBERO."""
 import argparse
+import hashlib
 import json
+import subprocess
 from pathlib import Path
 import torch
 from envs.libero_env import make_libero
@@ -8,6 +10,7 @@ from envs.perturbation import DynamicLibero, PerturbationConfig
 from models.smolvla_wrapper import FrozenSmolVLA
 from policies.residual_policy import ResidualEnv
 from rl import SACAgent, SACConfig, OffPolicyTrainer, TrainerConfig, seed_everything
+from scripts.training_monitor import TrainingMonitor, plot_curves
 
 
 def main():
@@ -26,6 +29,8 @@ def main():
     p.add_argument("--distance-cm", type=float, default=0)
     p.add_argument("--run-dir", default="results/residual_s0")
     p.add_argument("--resume", action="store_true")
+    p.add_argument("--log-every", type=int, default=100)
+    p.add_argument("--checkpoint-every", type=int, default=1000)
     args = p.parse_args()
     if min(args.total_env_steps, args.batch_size, args.utd_ratio) < 1:
         p.error("steps, batch-size and utd-ratio must be positive")
@@ -50,14 +55,21 @@ def main():
         warmup_steps=args.warmup_steps, warmup_policy="zero",
         learning_starts=args.warmup_steps, batch_size=args.batch_size, utd_ratio=args.utd_ratio,
         buffer_capacity=max(10000, args.total_env_steps), eval_every=0,
-        log_every=32, checkpoint_every=0, run_dir=str(run_dir), seed=args.seed,
+        log_every=args.log_every, checkpoint_every=args.checkpoint_every, run_dir=str(run_dir), seed=args.seed,
         episode_info_keys=["perturb_step", "perturb_dist"])
     # Keep capacity fixed across short resume checks and ordinary 20k-step runs.
     config.buffer_capacity = 100000
     trainer = OffPolicyTrainer(env, agent, config)
+    trainer.logger = TrainingMonitor(trainer.logger, run_dir)
     metadata = {"args": vars(args), "artifacts": artifacts,
                 "gripper_residual": False, "observation": "proprioception8+base_action7",
                 "vla_budget": "initial query charged to first step", "evaluation_during_training": False}
+    metadata["git_commit"] = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+    metadata["source_sha256_lf"] = {
+        str(path): hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
+        for path in [Path(__file__).relative_to(Path.cwd())] +
+        [p for directory in ("rl", "envs", "models", "policies", "scripts") for p in Path(directory).glob("*.py")]
+    }
     run_dir.mkdir(parents=True, exist_ok=True)
     (run_dir / ("resume_config.json" if args.resume else "base_config.json")).write_text(json.dumps(metadata, indent=2))
     try:
@@ -66,6 +78,7 @@ def main():
         actor_before = [x.detach().clone() for x in agent.actor.parameters()]
         critic_before = [x.detach().clone() for x in agent.critic.parameters()]
         metrics = trainer.train()
+        plot_curves(run_dir)
         report = {"env_steps": trainer.env_steps, "grad_updates": trainer.grad_updates,
             "vla_calls": trainer.vla_calls, "metrics": metrics,
             "actor_changed": any(not torch.equal(a, b) for a, b in zip(actor_before, agent.actor.parameters())),
@@ -74,6 +87,7 @@ def main():
         (run_dir / ("resume_summary.json" if args.resume else "summary.json")).write_text(json.dumps(report, indent=2))
         print(json.dumps(report, indent=2), flush=True)
     finally:
+        trainer.logger.close()
         env.close()
 
 
