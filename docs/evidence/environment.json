@@ -1,0 +1,24 @@
+{
+  "python": "3.12.16 (main, Oct 26 2026, 14:08:45) [Clang 23.1.3 ]",
+  "packages": {
+    "torch": "2.7.1+cu126",
+    "transformers": "5.5.4",
+    "lerobot": "0.6.2",
+    "hf-libero": "0.1.4",
+    "robosuite": "1.4.0",
+    "mujoco": "3.8.1",
+    "num2words": "0.5.14",
+    "docopt": "0.6.2"
+  },
+  "source_sha256": {
+    "lerobot.policies.smolvla.modeling_smolvla": "919cb4223e337067d6728d03d10d6ca730b65adb0cd59969ac25e11f900929ab",
+    "lerobot.policies.smolvla.smolvlm_with_expert": "7a97d06b9aeb83d0f4a2990b32aec5086d38613feb2b39dd59105c9dc2f57141",
+    "lerobot.envs.libero": "97c984f12331527626812ec19967ef399e545535b3571becf044db2417ae9d71",
+    "lerobot.processor.env_processor": "cf140f56d1da6bb1171c4543ad60aa5fe3656b0ced35b48bbe53d67152cd072d"
+  },
+  "torch_cuda": "12.6",
+  "cuda_available": true,
+  "devices": [
+    "NVIDIA A10"
+  ]
+}

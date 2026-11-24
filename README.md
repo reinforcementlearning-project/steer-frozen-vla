@@ -17,9 +17,9 @@
 | `rl/` 공통 SAC 학습 프레임워크 (계획서 8-1) | 이다혜 | ✅ 구현·테스트 완료 |
 | `models/noise_wrapper.py` SmolVLA 노이즈 주입 (8-2) | 이다혜 | ⬜ |
 | `policies/noise_policy.py`, `train_dsrl.py` (8-3) | 이다혜 | ⬜ |
-| `envs/libero_env.py`, `envs/perturbation.py` (7-1, 7-2) | 이승연 | ⬜ |
-| `models/smolvla_wrapper.py` (7-1) | 이승연 | ⬜ |
-| `policies/residual_policy.py`, `train_residual.py` (7-3) | 이승연 | ⬜ |
+| `envs/libero_env.py`, `envs/perturbation.py` (7-1, 7-2) | 이승연 | 정상·접근 중 0/2/4cm 교란 실행 검증 |
+| `models/smolvla_wrapper.py` (7-1) | 이승연 | Frozen checkpoint 로딩·실제 성공 rollout·chunk 검증 |
+| `policies/residual_policy.py`, `train_residual.py` (7-3) | 이승연 | 공통 Trainer 업데이트·저장·재시작 검증, 본 학습 미완료 |
 | `evaluation/evaluate.py` | 이승연 주도 | ⬜ |
 
 ## 디렉터리 구조
@@ -50,6 +50,24 @@ pip install -r requirements.txt
 ```
 
 LIBERO / LeRobot / SmolVLA 의존성은 환경 모듈이 추가될 때 함께 기재한다.
+
+### 서버에서 SmolVLA·LIBERO 실행
+
+[Day 1 실행 방법](docs/day1-runbook.md)에 checkpoint revision, 프로젝트 전용 설정,
+정규화·gripper·추론 주기, 교란 정의 및 실제 LIBERO에서 공통 Trainer를 검증하는 명령을 정리했다.
+[Day 1 검증 결과](docs/day1-results.md): 실제 성공 rollout, Action Chunk, 조건별 50회 교란 평가,
+공통 Trainer 업데이트·저장·재시작 및 원시 로그.
+서버 작업은 `~/rf/steer-frozen-vla`에서 수행하며 기존 연구 환경은 읽어서 사용한다.
+
+현재 검증된 환경: Python 3.12.16, LeRobot 배포 메타데이터 0.6.2,
+torch 2.7.1+cu126, transformers 5.5.4, hf-libero 0.1.4, robosuite 1.4.0, mujoco 3.8.1,
+num2words 0.5.14. 실제 GPU는 A10이며 12GB GPU에서 측정한 결과로 간주하지 않는다.
+LeRobot 소스의 동봉 revision 표시는 `9f45b7b37cc4b33f8ecdb503aa4d209370bd528d`이며
+해당 소스 디렉터리에는 Git metadata가 없어 HEAD를 직접 확인한 값과 구분한다.
+
+학습/평가 seed, 환경 step, RL 결정 횟수, SAC update, VLA 호출 수는 따로 기록한다.
+정책별 독립 학습 seed 최소 2개(목표 3개), 조건별 평가 최소 50 episode와 성공률 95% CI가
+필수이며, 원래 랜덤 noise Base와 고정 `w=0`은 서로 다른 대조군이다.
 
 ## 공통 SAC 사용법 (요약)
 

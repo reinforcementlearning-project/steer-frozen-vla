@@ -1,0 +1,715 @@
+{
+  "args": {
+    "suite": "libero_object",
+    "task_id": 0,
+    "episodes": 1,
+    "max_steps": 32,
+    "n_action_steps": 1,
+    "seed": 0,
+    "update": true,
+    "target": null,
+    "distance_cm": 0,
+    "out": "results/residual_update.json"
+  },
+  "artifacts": {
+    "model": "lerobot/smolvla_libero",
+    "revision": "a24f1f380461b665158d52acd140152c79e8b36d",
+    "checkpoint": "/home/sylee/rf/.cache/huggingface/hub/models--lerobot--smolvla_libero/snapshots/a24f1f380461b665158d52acd140152c79e8b36d",
+    "backbone": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+    "backbone_revision": "4cde9d208e19519c36917aa170fffc7e381aa0ad",
+    "backbone_path": "/home/sylee/rf/.cache/huggingface/hub/models--HuggingFaceTB--SmolVLM2-500M-Video-Instruct/snapshots/4cde9d208e19519c36917aa170fffc7e381aa0ad",
+    "hf_home": "/home/sylee/rf/.cache/huggingface"
+  },
+  "checkpoint_n_action_steps": 50,
+  "n_action_steps": 1,
+  "chunk_size": 50,
+  "normalization": "{'VISUAL': <NormalizationMode.IDENTITY: 'IDENTITY'>, 'STATE': <NormalizationMode.MEAN_STD: 'MEAN_STD'>, 'ACTION': <NormalizationMode.MEAN_STD: 'MEAN_STD'>}",
+  "frozen": true,
+  "episodes": [
+    {
+      "episode": 0,
+      "env_steps": 32,
+      "success": false,
+      "return": 0.0,
+      "vla_calls": 33,
+      "trace": [
+        {
+          "env_step": 0,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.723305162973702,
+          "action_min": -1.0161720514297485,
+          "action_max": 0.9990125298500061,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 1,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.2780868988484144,
+          "action_min": -1.0122379064559937,
+          "action_max": 1.0076910257339478,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 2,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.26997982384637,
+          "action_min": -1.0075420141220093,
+          "action_max": 1.0106897354125977,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 3,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.2742412216030061,
+          "action_min": -1.011993169784546,
+          "action_max": 1.0000988245010376,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 4,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.26720512891188264,
+          "action_min": -1.0075149536132812,
+          "action_max": 1.0109825134277344,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 5,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.27233962807804346,
+          "action_min": -1.0046035051345825,
+          "action_max": 1.010691523551941,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 6,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.2672110083512962,
+          "action_min": -1.0031927824020386,
+          "action_max": 1.0112557411193848,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 7,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.26960932184010744,
+          "action_min": -1.0065311193466187,
+          "action_max": 1.0073562860488892,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 8,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.26761065935716033,
+          "action_min": -1.0152493715286255,
+          "action_max": 1.0046497583389282,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 9,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.2702114940620959,
+          "action_min": -1.0123727321624756,
+          "action_max": 1.0018656253814697,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 10,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.27455889293923974,
+          "action_min": -1.0052179098129272,
+          "action_max": 1.0059747695922852,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 11,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.2723863977007568,
+          "action_min": -1.0054889917373657,
+          "action_max": 1.007596731185913,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 12,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.2706293547526002,
+          "action_min": -1.0161042213439941,
+          "action_max": 1.0076735019683838,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 13,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.26950563164427876,
+          "action_min": -1.008876919746399,
+          "action_max": 1.0085631608963013,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 14,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.26815595012158155,
+          "action_min": -1.0082074403762817,
+          "action_max": 1.007219672203064,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 15,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.26734938798472285,
+          "action_min": -0.9996857643127441,
+          "action_max": 1.0064481496810913,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 16,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.2674164376221597,
+          "action_min": -1.0073827505111694,
+          "action_max": 1.0007392168045044,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 17,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.2680638297460973,
+          "action_min": -1.0119279623031616,
+          "action_max": 1.011427879333496,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 18,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.26934554101899266,
+          "action_min": -1.0045703649520874,
+          "action_max": 1.0060186386108398,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 19,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.27033034386113286,
+          "action_min": -1.0039291381835938,
+          "action_max": 1.0031648874282837,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 20,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.26791241811588407,
+          "action_min": -1.0051507949829102,
+          "action_max": 1.0098843574523926,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 21,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.2685541589744389,
+          "action_min": -1.0074734687805176,
+          "action_max": 1.0067124366760254,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 22,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.26761571737006307,
+          "action_min": -1.0075433254241943,
+          "action_max": 1.0104252099990845,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 23,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.26768237771466374,
+          "action_min": -1.009759783744812,
+          "action_max": 1.0054105520248413,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 24,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.26795112807303667,
+          "action_min": -1.0115430355072021,
+          "action_max": 1.011652946472168,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 25,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.26709441700950265,
+          "action_min": -1.0146839618682861,
+          "action_max": 1.0024082660675049,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 26,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.26757746702060103,
+          "action_min": -1.0134660005569458,
+          "action_max": 1.008959412574768,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 27,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.2674245866946876,
+          "action_min": -1.010553240776062,
+          "action_max": 1.0100255012512207,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 28,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.2681920980103314,
+          "action_min": -1.0174018144607544,
+          "action_max": 1.0107860565185547,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 29,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.2672816067934036,
+          "action_min": -1.0106843709945679,
+          "action_max": 1.0041146278381348,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 30,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.2703275717794895,
+          "action_min": -1.0066198110580444,
+          "action_max": 1.0031887292861938,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 31,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.26858897926285863,
+          "action_min": -1.0062867403030396,
+          "action_max": 1.0057915449142456,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 32,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.2687781499698758,
+          "action_min": -1.0082286596298218,
+          "action_max": 1.0074039697647095,
+          "state_shape": [
+            1,
+            8
+          ]
+        }
+      ],
+      "perturb_events": []
+    }
+  ],
+  "update": {
+    "critic_loss": 0.4445681571960449,
+    "q1_mean": 0.11542655527591705,
+    "q_target_mean": 0.5649348497390747,
+    "actor_loss": -0.6235471367835999,
+    "entropy": 4.768779754638672,
+    "alpha_loss": -27.098617553710938,
+    "alpha": 0.0999700129032135
+  },
+  "actor_changed": true,
+  "critic_changed": true,
+  "frozen_grad_none": true,
+  "reload_action_equal": true,
+  "wall_seconds": 13.687504810281098,
+  "peak_vram_bytes": 1265747456
+}

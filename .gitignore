@@ -8,3 +8,7 @@ results/
 *.npz
 wandb/
 .ipynb_checkpoints/
+.cache/
+configs/libero/config.yaml
+*.safetensors
+.env

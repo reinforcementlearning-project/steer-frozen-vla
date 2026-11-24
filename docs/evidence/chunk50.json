@@ -1,0 +1,79 @@
+{
+  "args": {
+    "suite": "libero_object",
+    "task_id": 0,
+    "episodes": 1,
+    "max_steps": 55,
+    "n_action_steps": 50,
+    "seed": 0,
+    "update": false,
+    "out": "results/chunk50.json"
+  },
+  "artifacts": {
+    "model": "lerobot/smolvla_libero",
+    "revision": "a24f1f380461b665158d52acd140152c79e8b36d",
+    "checkpoint": "/home/sylee/rf/.cache/huggingface/hub/models--lerobot--smolvla_libero/snapshots/a24f1f380461b665158d52acd140152c79e8b36d",
+    "backbone": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+    "backbone_revision": "4cde9d208e19519c36917aa170fffc7e381aa0ad",
+    "backbone_path": "/home/sylee/rf/.cache/huggingface/hub/models--HuggingFaceTB--SmolVLM2-500M-Video-Instruct/snapshots/4cde9d208e19519c36917aa170fffc7e381aa0ad",
+    "hf_home": "/home/sylee/rf/.cache/huggingface"
+  },
+  "checkpoint_n_action_steps": 50,
+  "n_action_steps": 50,
+  "chunk_size": 50,
+  "normalization": "{'VISUAL': <NormalizationMode.IDENTITY: 'IDENTITY'>, 'STATE': <NormalizationMode.MEAN_STD: 'MEAN_STD'>, 'ACTION': <NormalizationMode.MEAN_STD: 'MEAN_STD'>}",
+  "frozen": true,
+  "episodes": [
+    {
+      "episode": 0,
+      "env_steps": 55,
+      "success": false,
+      "return": 0.0,
+      "vla_calls": 2,
+      "trace": [
+        {
+          "env_step": 0,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.7769903782755136,
+          "action_min": -1.0161720514297485,
+          "action_max": 0.9990125298500061,
+          "state_shape": [
+            1,
+            8
+          ]
+        },
+        {
+          "env_step": 50,
+          "chunk_shape": [
+            1,
+            50,
+            7
+          ],
+          "noise_shape": [
+            1,
+            50,
+            32
+          ],
+          "inference_seconds": 0.25686892680823803,
+          "action_min": -0.23105120658874512,
+          "action_max": 1.012465000152588,
+          "state_shape": [
+            1,
+            8
+          ]
+        }
+      ]
+    }
+  ],
+  "wall_seconds": 68.89639495173469,
+  "peak_vram_bytes": 1264298496
+}
