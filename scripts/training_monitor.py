@@ -38,8 +38,12 @@ def plot_curves(run_dir):
 
 
 class TrainingMonitor:
-    def __init__(self, logger, run_dir):
+    def __init__(self, logger, run_dir, optional_keys=()):
+        # optional_keys: metrics the agent does not produce in this configuration
+        # (e.g. alpha_loss when the entropy coefficient is fixed); they are still
+        # reserved as columns but excluded from the finiteness check.
         self.logger, self.run_dir = logger, run_dir
+        self.required = tuple(k for k in LOSS_KEYS if k not in optional_keys)
 
     def log(self, stream, row):
         row = dict(row)
@@ -48,7 +52,7 @@ class TrainingMonitor:
             # may have produced any losses. Reserve all columns from the start.
             for key in LOSS_KEYS:
                 row.setdefault(key, float("nan"))
-            if row["grad_updates"] > 0 and not all(math.isfinite(row[k]) for k in LOSS_KEYS):
+            if row["grad_updates"] > 0 and not all(math.isfinite(row[k]) for k in self.required):
                 raise FloatingPointError("Non-finite SAC metrics")
         self.logger.log(stream, row)
         if stream == "train":

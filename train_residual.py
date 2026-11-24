@@ -4,6 +4,7 @@ import hashlib
 import json
 import subprocess
 from pathlib import Path
+import numpy as np
 import torch
 from envs.libero_env import make_libero
 from envs.perturbation import DynamicLibero, PerturbationConfig
@@ -11,6 +12,30 @@ from models.smolvla_wrapper import FrozenSmolVLA
 from policies.residual_policy import ResidualEnv
 from rl import SACAgent, SACConfig, OffPolicyTrainer, TrainerConfig, seed_everything
 from scripts.training_monitor import TrainingMonitor, plot_curves
+
+
+class EpisodeResidualStats:
+    """Logging-only wrapper: running per-episode mean of the executed residual norm
+    (||alpha * u||, gripper excluded) and the fraction of steps with any |u| > 0.99.
+    The trainer copies these info keys into episodes.csv at episode end."""
+
+    def __init__(self, env):
+        self.env = env
+
+    def __getattr__(self, name):
+        return getattr(self.env, name)
+
+    def reset(self, **kwargs):
+        self._n, self._norm, self._sat = 0, 0., 0
+        return self.env.reset(**kwargs)
+
+    def step(self, action):
+        obs, reward, terminated, truncated, info = self.env.step(action)
+        self._n += 1
+        self._norm += float(info.get("residual_norm", 0.))
+        self._sat += int(np.any(np.abs(np.asarray(action)) > 0.99))
+        info.update(residual_norm_mean=self._norm / self._n, residual_sat_frac=self._sat / self._n)
+        return obs, reward, terminated, truncated, info
 
 
 def main():
@@ -35,7 +60,12 @@ def main():
                    help="6 = arm-only residual (SAC target entropy -6); 7 = original (gripper output ignored)")
     p.add_argument("--random-direction", action="store_true",
                    help="draw the perturbation direction per episode from +x/-x/+y/-y (default: fixed +y)")
+    p.add_argument("--fixed-entropy-coef", type=float, default=None,
+                   help="disable SAC temperature auto-tuning and keep the entropy coefficient fixed at this value "
+                        "(SACConfig(autotune_alpha=False, init_alpha=value)); default: auto-tuned from 0.1")
     args = p.parse_args()
+    if args.fixed_entropy_coef is not None and not args.fixed_entropy_coef > 0:
+        p.error("--fixed-entropy-coef must be positive")
     if min(args.total_env_steps, args.batch_size, args.utd_ratio) < 1:
         p.error("steps, batch-size and utd-ratio must be positive")
     run_dir = Path(args.run_dir)
@@ -43,9 +73,10 @@ def main():
         p.error("Run already exists; choose another run-dir or --resume")
     if args.resume:
         original = json.loads((run_dir / "base_config.json").read_text())["args"]
-        defaults = {"residual_dims": 7, "random_direction": False}  # runs created before these flags
+        defaults = {"residual_dims": 7, "random_direction": False,  # runs created before these flags
+                    "fixed_entropy_coef": None}
         for key in ("suite", "task_id", "n_action_steps", "max_episode_steps", "alpha", "seed", "target", "distance_cm",
-                    "residual_dims", "random_direction"):
+                    "residual_dims", "random_direction", "fixed_entropy_coef"):
             if original.get(key, defaults.get(key)) != vars(args)[key]:
                 p.error(f"Resume would change {key}; use the original setting")
     seed_everything(args.seed)
@@ -61,20 +92,28 @@ def main():
         p.error("--random-direction needs --target")
     env = ResidualEnv(simulator, base, args.alpha, max_steps=args.max_episode_steps,
                       residual_dims=args.residual_dims)
-    agent = SACAgent(env.obs_dim, env.action_spec, SACConfig(device="cuda"))
+    sac_config = SACConfig(device="cuda")
+    if args.fixed_entropy_coef is not None:
+        sac_config = SACConfig(device="cuda", autotune_alpha=False, init_alpha=args.fixed_entropy_coef)
+    agent = SACAgent(env.obs_dim, env.action_spec, sac_config)
+    env = EpisodeResidualStats(env)
     config = TrainerConfig(total_env_steps=args.total_env_steps,
         warmup_steps=args.warmup_steps, warmup_policy="zero",
         learning_starts=args.warmup_steps, batch_size=args.batch_size, utd_ratio=args.utd_ratio,
         buffer_capacity=max(10000, args.total_env_steps), eval_every=0,
         log_every=args.log_every, checkpoint_every=args.checkpoint_every, run_dir=str(run_dir), seed=args.seed,
-        episode_info_keys=["perturb_step", "perturb_dist", "perturb_axis", "perturb_sign"])
+        episode_info_keys=["perturb_step", "perturb_dist", "perturb_axis", "perturb_sign",
+                           "residual_norm_mean", "residual_sat_frac"])
     # Keep capacity fixed across short resume checks and ordinary 20k-step runs.
     config.buffer_capacity = 100000
     trainer = OffPolicyTrainer(env, agent, config)
-    trainer.logger = TrainingMonitor(trainer.logger, run_dir)
+    trainer.logger = TrainingMonitor(trainer.logger, run_dir,
+                                     optional_keys=("alpha_loss",) if args.fixed_entropy_coef is not None else ())
     metadata = {"args": vars(args), "artifacts": artifacts,
                 "gripper_residual": False, "residual_dims": args.residual_dims,
-                "sac_target_entropy": agent.target_entropy, "random_direction": args.random_direction, "observation": "proprioception8+base_action7",
+                "sac_target_entropy": agent.target_entropy, "random_direction": args.random_direction,
+                "sac_entropy_coef": ("fixed", args.fixed_entropy_coef) if args.fixed_entropy_coef is not None
+                else ("auto", sac_config.init_alpha), "observation": "proprioception8+base_action7",
                 "vla_budget": "initial query charged to first step", "evaluation_during_training": False}
     metadata["git_commit"] = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
     metadata["source_sha256_lf"] = {

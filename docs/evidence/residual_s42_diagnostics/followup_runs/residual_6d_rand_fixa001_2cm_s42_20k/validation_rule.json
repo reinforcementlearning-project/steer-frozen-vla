@@ -1,0 +1,21 @@
+{
+  "purpose": "Pre-registered checkpoint selection for results/residual_6d_rand_fixa001_2cm_s42_20k (written before training starts; copied into each run directory at launch)",
+  "candidates": "checkpoints/ckpt_00002000.pt ... ckpt_00020000.pt, every 1000 env steps (ckpt_00001000 excluded: end of zero-residual warmup, no SAC update yet)",
+  "validation_conditions": [
+    {"axis": 0, "direction": 1, "distance_cm": 2},
+    {"axis": 0, "direction": -1, "distance_cm": 2},
+    {"axis": 1, "direction": 1, "distance_cm": 2},
+    {"axis": 1, "direction": -1, "distance_cm": 2}
+  ],
+  "episodes_per_condition": 10,
+  "eval_seed": 1000,
+  "seed_note": "episode i uses reset/noise seed 1000+i; the 50-episode test evaluation uses seeds 0-49. LIBERO initial states come from the task's fixed list (validation reuses init states 0-9 with different noise seeds).",
+  "policy_action": "deterministic tanh(mu)",
+  "score": "total successes over the 40 validation episodes",
+  "selection": "highest score; ties broken in favour of the later checkpoint",
+  "reported_policies": {
+    "final": "ckpt_00020000.pt (primary answer to whether fixing the entropy coefficient prevents late collapse)",
+    "selected": "validation-selected checkpoint (result of the pre-registered protocol)"
+  },
+  "test_evaluation": "both policies on the 9 standard conditions (0cm, +-x/+-y at 2cm and 4cm), 50 episodes each, eval seed 0, paired with the frozen base"
+}

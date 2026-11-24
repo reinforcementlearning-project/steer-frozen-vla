@@ -27,16 +27,22 @@ from rl import ActionSpec, SACAgent, SACConfig  # noqa: E402
 RUN = ROOT / "results/residual_2cm_s42_20261124_20k"
 RUNS = {"s42": RUN,  # baseline: 7D residual, fixed +y 2cm
         "v6d": ROOT / "results/residual_6d_2cm_s42_20k",  # follow-up 1: 6D residual (target entropy -6)
-        "v6drand": ROOT / "results/residual_6d_rand_2cm_s42_20k"}  # follow-up 2: 6D + random direction
+        "v6drand": ROOT / "results/residual_6d_rand_2cm_s42_20k",  # follow-up 2: 6D + random direction
+        "v6drandfix": ROOT / "results/residual_6d_rand_fixa001_2cm_s42_20k"}  # follow-up 3: + fixed entropy coef 0.01
 CKPTS = {"ck7k": RUN / "checkpoints/ckpt_00007000.pt", "final": RUN / "checkpoints/ckpt_00020000.pt",
          "v6d_final": RUNS["v6d"] / "checkpoints/ckpt_00020000.pt",
-         "v6drand_final": RUNS["v6drand"] / "checkpoints/ckpt_00020000.pt"}
+         "v6drand_final": RUNS["v6drand"] / "checkpoints/ckpt_00020000.pt",
+         "fixa_final": RUNS["v6drandfix"] / "checkpoints/ckpt_00020000.pt"}
+_sel = RUNS["v6drandfix"] / "validation/selection.json"
+if _sel.exists():  # pre-registered validation-selected checkpoint
+    CKPTS["fixa_val"] = ROOT / json.loads(_sel.read_text())["selected_checkpoint"]
 CKPTS = {k: v for k, v in CKPTS.items() if v.exists()}
 POLICIES = ["base"] + list(CKPTS)
 PNAME = {"base": "Frozen base", "ck7k": "Residual 7k", "final": "Residual 20k",
-         "v6d_final": "6D 20k", "v6drand_final": "6D+rand 20k"}
+         "v6d_final": "6D 20k", "v6drand_final": "6D+rand 20k", "fixa_final": "6D+rand fixed-coef 20k",
+         "fixa_val": "6D+rand fixed-coef (val-selected)"}
 PCOLOR = {"base": "#7f7f7f", "ck7k": "#1f77b4", "final": "#d62728", "v6d_final": "#2ca02c",
-          "v6drand_final": "#9467bd"}
+          "v6drand_final": "#9467bd", "fixa_final": "#ff7f0e", "fixa_val": "#8c564b"}
 # name: (axis, direction, distance_cm, label)
 CONDS = {"0cm": (1, 1, 0, "0cm"), "py2": (1, 1, 2, "+y 2cm"), "my2": (1, -1, 2, "-y 2cm"),
          "px2": (0, 1, 2, "+x 2cm"), "mx2": (0, -1, 2, "-x 2cm"), "py4": (1, 1, 4, "+y 4cm"),
@@ -169,7 +175,21 @@ def part_a(out, figs):
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     labels = [v[3] for v in CONDS.values()]
+    plot_success(rows, POLICIES, labels, figs / "A_direction_success.png",
+                 "Direction generalization (training: +y 2cm or random direction, seed 42)")
+    focus = [p for p in ("base", "v6drand_final", "fixa_final", "fixa_val") if p in POLICIES]
+    if "fixa_final" in focus:
+        plot_success(rows, focus, labels, figs / "A_fixed_entropy_coef.png",
+                     "Fixed entropy coefficient 0.01 vs auto-tuned (6D + random direction, seed 42)")
+    print(f"A: {len(rows)} runs, {len(cmp_rows)} comparisons, repro checks {len(repro)}")
+
+
+def plot_success(rows, policies, labels, path, title):
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
     fig, ax = plt.subplots(figsize=(11, 4), constrained_layout=True)
+    POLICIES = policies
     w = .8 / len(POLICIES)
     for i, pol in enumerate(POLICIES):
         xs, ys, lo, hi = [], [], [], []
@@ -184,12 +204,11 @@ def part_a(out, figs):
     ax.set_xticks(range(len(labels)), labels)
     ax.set_ylim(0, 1.05)
     ax.set_ylabel("Success rate (50 ep, Wilson 95% CI)")
-    ax.set_title("Direction generalization — trained on +y 2cm (seed 42)")
-    ax.legend(ncol=len(POLICIES), fontsize=8)
+    ax.set_title(title)
+    ax.legend(ncol=min(len(POLICIES), 4), fontsize=8)
     ax.grid(axis="y", alpha=.25)
-    fig.savefig(figs / "A_direction_success.png", dpi=140)
+    fig.savefig(path, dpi=140)
     plt.close(fig)
-    print(f"A: {len(rows)} runs, {len(cmp_rows)} comparisons, repro checks {len(repro)}")
 
 
 # ============================================================== B
@@ -453,7 +472,8 @@ def compare_runs(out, figs):
     runs = {t: r for t, r in RUNS.items() if (r / "summary.json").exists()}
     if len(runs) < 2:
         return
-    names = {"s42": "7D fixed +y (baseline)", "v6d": "6D fixed +y", "v6drand": "6D random dir"}
+    names = {"s42": "7D fixed +y (baseline)", "v6d": "6D fixed +y", "v6drand": "6D random dir",
+             "v6drandfix": "6D random dir, fixed coef 0.01"}
     fig, axes = plt.subplots(1, 4, figsize=(20, 3.8), constrained_layout=True)
     for t, r in runs.items():
         tr, ep = pd.read_csv(r / "train.csv"), pd.read_csv(r / "episodes.csv")

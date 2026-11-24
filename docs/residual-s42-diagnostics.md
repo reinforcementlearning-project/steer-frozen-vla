@@ -197,3 +197,54 @@ POLICIES="v6d_final --checkpoint results/residual_6d_2cm_s42_20k/checkpoints/ckp
   scripts/run_direction_eval.sh 12                                 # 후속 run 예시
 python scripts/analyze_residual_diagnostics.py --parts A B C
 ```
+
+## 8. 후속 실험: Entropy Coefficient 0.01 고정 (seed 42, 2026-11-24 실행)
+
+- Run: `results/residual_6d_rand_fixa001_2cm_s42_20k/` (`scripts/launch_residual_variant.sh 6d_rand_fixa001 0 42`)
+- 변경점은 6D+rand 설정에 `SACConfig(autotune_alpha=False, init_alpha=0.01)`을 적용한 것 하나뿐이다. 공통 `rl/`은 수정하지 않았다.
+- 학습 중 Entropy, Actor/Critic Loss는 `train.csv`에, 에피소드별 실행 Residual Norm과 포화 비율은 `episodes.csv`에 기록했다.
+- 20,000 step, 19,001 update로 정상 종료했다. VLA는 frozen 상태이고 오류는 없다.
+
+### 8.1 사전 등록 Validation
+- 규칙은 학습 시작 전에 run 디렉터리에 저장했다(`validation_rule.json`).
+- 후보는 ckpt 2k~20k(19개)이다. 검증 조건은 ±x/±y 2cm 각 10 에피소드, eval seed 1000, 결정론적 actor이고, 점수는 40 에피소드 중 성공 수다.
+- 결과: 모든 checkpoint가 31~35/40에 분포했다. 선정은 **12k(35/40)**, 최종 20k는 32/40이다(`validation/validation_scores.csv`).
+- 점수 차이가 40 에피소드 기준 noise 수준이므로, 이번 validation이 checkpoint를 거의 구분하지 못했다는 점도 함께 기록한다.
+
+### 8.2 9개 조건 평가 (50 에피소드, Frozen Base와 같은 초기 상태·noise seed)
+
+![fixed](evidence/residual_s42_diagnostics/figures/A_fixed_entropy_coef.png)
+
+| 조건 | Frozen Base | 6D+rand (Coef 자동) | **Coef 고정 20k** | Coef 고정 12k (val 선정) |
+|---|---|---|---|---|
+| 0cm | 94% [84, 98] | 12% | **94%** [84, 98] (p=1.0) | 96% [87, 99] (p=1.0) |
+| +y 2cm | 68% [54, 79] | 60% | **84%** [71, 92] (p=0.021) | 78% [65, 87] (p=0.18) |
+| −y 2cm | 82% [69, 90] | 2% | **80%** [67, 89] (p=1.0) | 86% [74, 93] (p=0.69) |
+| +x 2cm | 82% [69, 90] | 16% | **78%** [65, 87] (p=0.75) | 82% [69, 90] (p=1.0) |
+| −x 2cm | 92% [81, 97] | 22% | **86%** [74, 93] (p=0.45) | 96% [87, 99] (p=0.63) |
+| +y 4cm | 24% [14, 37] | 64% | **42%** [29, 56] (p=0.022) | 44% [31, 58] (p=0.013) |
+| −y 4cm | 68% [54, 79] | 0% | **62%** [48, 74] (p=0.58) | 72% [58, 83] (p=0.75) |
+| +x 4cm | 30% [19, 44] | 12% | **42%** [29, 56] (p=0.11) | 36% [24, 50] (p=0.51) |
+| −x 4cm | 66% [52, 78] | 10% | **70%** [56, 81] (p=0.73) | 74% [60, 84] (p=0.22) |
+
+(p = Frozen Base 대비 exact McNemar. 모든 run에서 교란이 50/50 적용됐고 거부는 0건이다.)
+
+### 8.3 측정
+- **후반부 붕괴 없음.** Policy entropy가 3.9~4.1로 유지됐다(자동 조절 run은 −4~−7까지 떨어졌다).
+- 결정론적 실행 잔차 ‖0.1u‖는 5k 이후 0.014~0.022이다. 2k에서 일시적으로 0.063까지 올랐다가 4k까지 0.026으로 내려왔다(자동 조절 run 후반은 0.15~0.19). 5k 이후 pre-tanh |μ|는 0.05~0.08, 정책 std는 0.84~0.87이고, 전 구간 포화는 0%다.
+- 학습 성공률(창별)은 0.4~1.0으로 하락 추세가 없다. 마지막 5k 구간은 0.6~1.0이다.
+- 교란 후 평균 잔차는 4cm 4방향 모두 |성분| ≤ 0.1이다. 큰 편향은 사라졌다.
+- **20k 정책은 9개 조건 어디서도 Base보다 유의하게 나쁘지 않다**(최대 −6%p, p ≥ 0.45). 자동 조절 6D+rand는 7개 조건에서 −56~−82%p였다.
+- Base보다 높은 조건은 +y 2cm(+16%p, p=0.021)와 +y 4cm(+18%p, p=0.022)다. 다만 18개 비교에 Bonferroni 보정(0.05/18 ≈ 0.0028)을 적용하면 어느 것도 유의하지 않다.
+- Q 평균은 0 → 2.1로 꾸준히 증가하며 수렴하지 않았다. α·H ≈ 0.04/step이 계속 들어오므로 Q 크기는 여전히 entropy bonus가 지배한다.
+
+### 8.4 해석 (추정)
+- 세 run 공통의 붕괴는 Entropy Coefficient 자동 감소와 강하게 연관되어 있었다. 이번에 그 하나만 고정하자 붕괴가 사라졌다. 이 결과는 H2의 Coefficient 부분을 seed 1개 수준에서 **인과적으로 지지**한다(단일 변경 ablation).
+- 대신 정책은 Base에 가까운 작은 보정(‖δ‖≈0.02)에 머물렀다. 강건성 향상은 작고 통계적으로 약하다.
+- Coef 0.01에서도 학습 중 행동은 여전히 탐색 노이즈가 지배하고(샘플 ‖δ‖≈0.14), 보상 신호(성공 transition 0.24% 수준)가 약하다. 개선 폭이 작은 것은 이 두 요인 때문일 가능성이 있다.
+- 결론적으로 이 설정은 **"붕괴 없이 Base 수준을 유지하는 Residual-SAC"**이다. DSRL 비교의 Residual-SAC 기준점으로 쓸 수 있지만 seed 1개뿐이다.
+
+### 8.5 다음 단계
+- 사용자 결정에 따라 Residual-SAC 하이퍼파라미터 탐색은 여기서 중단한다.
+- DSRL 비교용 최종 설정 후보는 **6D + 무작위 방향 + Entropy Coefficient 0.01 고정 + 사전 등록 validation**이다.
+- 비교에 쓰려면 seed 43/44 추가 학습이 필요하다(아직 시작하지 않음).
