@@ -1,0 +1,13 @@
+policy,replaced_by_mean,n_steps,mean_abs_change_u,rel_change_l2,u_l2_mean,u_std_across_states_mean
+ck7k,proprio8,89644,0.0633,0.6709,0.2767,0.1156
+ck7k,base_action7,89644,0.0759,0.8155,0.2767,0.1156
+ck7k,all15,89644,0.0871,0.9166,0.2767,0.1156
+final,proprio8,89644,0.1669,0.3407,1.4967,0.5681
+final,base_action7,89644,0.5155,1.01,1.4967,0.5681
+final,all15,89644,0.5557,1.1169,1.4967,0.5681
+v6d_final,proprio8,89644,0.1344,0.2483,1.7102,0.5339
+v6d_final,base_action7,89644,0.5308,0.8523,1.7102,0.5339
+v6d_final,all15,89644,0.5552,0.8695,1.7102,0.5339
+v6drand_final,proprio8,89644,0.138,0.2443,1.8076,0.5067
+v6drand_final,base_action7,89644,0.4716,0.7892,1.8076,0.5067
+v6drand_final,all15,89644,0.47,0.7657,1.8076,0.5067

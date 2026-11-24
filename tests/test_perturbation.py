@@ -84,3 +84,39 @@ def test_zero_distance_does_not_reset_velocity():
     old = data.velocity.copy()
     env.step(np.zeros(7))
     np.testing.assert_array_equal(data.velocity, old)
+
+
+def test_random_direction_is_seeded_per_episode_and_logged():
+    data = Data()
+    sim = NS(data=data, forward=lambda: None, model=NS(body_name2id=lambda _: 0,
+        geom_name2id=lambda _: 5, geom_id2name=lambda x: "table"))
+    inner = NS(sim=sim, objects_dict={"target": NS(joints=["joint"], root_body="body", contact_geoms=["geom"])},
+               _get_observations=lambda **kwargs: {"robot0_eef_pos": np.array([0., .10, .04])})
+    raw = NS(_env=NS(env=inner), reset=lambda **kwargs: ({}, {}),
+             step=lambda action: ({}, 0., False, False, {}), _format_raw_obs=lambda obs: obs)
+    dirs = ((0, 1), (0, -1), (1, 1), (1, -1))
+    env = DynamicLibero(raw, PerturbationConfig("target", .02, earliest_step=1, directions=dirs))
+    seen = []
+    for seed in range(40):
+        data.pose = np.array([0., 0., .04, 1., 0., 0., 0.])
+        env.reset(seed=seed)
+        _, _, _, _, info = env.step(np.zeros(7))
+        axis, sign = info["perturb_axis"], info["perturb_sign"]
+        assert (axis, sign) in dirs
+        assert data.pose[axis] == pytest.approx(.02 * sign)
+        assert info["perturb_events"][0]["config"]["axis"] == axis
+        seen.append((axis, sign))
+        env.reset(seed=seed)  # same seed -> same direction
+        assert (env.episode_config.axis, env.episode_config.direction) == (axis, sign)
+    assert set(seen) == set(dirs)
+
+
+def test_fixed_direction_default_unchanged():
+    env, data = make_env()
+    _, _, _, _, info = env.step(np.zeros(7))
+    assert (info["perturb_axis"], info["perturb_sign"]) == (1, 1)
+
+
+def test_invalid_direction_rejected():
+    with pytest.raises(ValueError):
+        PerturbationConfig("target", .02, directions=((2, 1),))

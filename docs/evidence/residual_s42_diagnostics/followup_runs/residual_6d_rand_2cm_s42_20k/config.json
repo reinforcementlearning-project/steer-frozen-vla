@@ -1,0 +1,69 @@
+{
+  "trainer": {
+    "total_env_steps": 20000,
+    "warmup_steps": 1000,
+    "warmup_policy": "zero",
+    "learning_starts": 1000,
+    "batch_size": 256,
+    "buffer_capacity": 100000,
+    "update_every": 1,
+    "utd_ratio": 1,
+    "log_every": 100,
+    "eval_every": 0,
+    "eval_episodes": 10,
+    "eval_seed": 10000,
+    "checkpoint_every": 1000,
+    "keep_checkpoints": true,
+    "save_buffer": true,
+    "seed": 42,
+    "run_dir": "results/residual_6d_rand_2cm_s42_20k",
+    "success_key": "success",
+    "vla_calls_key": "vla_calls",
+    "episode_info_keys": [
+      "perturb_step",
+      "perturb_dist",
+      "perturb_axis",
+      "perturb_sign"
+    ],
+    "verbose": true
+  },
+  "agent": {
+    "hidden_dims": [
+      256,
+      256
+    ],
+    "actor_lr": 0.0003,
+    "critic_lr": 0.0003,
+    "alpha_lr": 0.0003,
+    "gamma": 0.99,
+    "tau": 0.005,
+    "init_alpha": 0.1,
+    "autotune_alpha": true,
+    "target_entropy_scale": 1.0,
+    "actor_update_freq": 1,
+    "target_update_freq": 1,
+    "grad_clip_norm": null,
+    "device": "cuda"
+  },
+  "obs_dim": 15,
+  "action_spec": {
+    "dim": 6,
+    "low": [
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0
+    ],
+    "high": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "name": "residual"
+  }
+}

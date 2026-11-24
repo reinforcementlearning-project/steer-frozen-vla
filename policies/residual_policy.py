@@ -10,13 +10,21 @@ from rl import ActionSpec
 class ResidualEnv:
     obs_dim = 15  # proprioception(8) + unnormalized base action(7), no oracle coordinates
 
-    def __init__(self, env, base, alpha=0.1, residual_gripper=False, max_steps=280):
+    def __init__(self, env, base, alpha=0.1, residual_gripper=False, max_steps=280, residual_dims=7):
         if not np.isfinite(alpha) or alpha < 0:
             raise ValueError("alpha must be nonnegative and finite")
+        if residual_dims not in (6, 7):
+            raise ValueError("residual_dims must be 6 (arm only) or 7")
+        if residual_dims == 6 and residual_gripper:
+            raise ValueError("A 6D residual has no gripper component")
         self.env, self.base = env, base
         self.alpha, self.residual_gripper = alpha, residual_gripper
         self.max_steps = max_steps
-        self.action_spec = ActionSpec(7, -1, 1, "residual")
+        # residual_dims=6 exposes only the effective arm dimensions to SAC, so the
+        # agent's default target entropy (-action_dim) is -6 instead of counting
+        # a gripper output that is zeroed below anyway.
+        self.residual_dims = residual_dims
+        self.action_spec = ActionSpec(residual_dims, -1, 1, "residual")
 
     def _observe(self, obs):
         state, self.base_action = self.base.action(obs, self.env.task_description, self.steps)
@@ -38,8 +46,10 @@ class ResidualEnv:
 
     def step(self, action):
         u = np.asarray(action, dtype=np.float32)
-        if u.shape != (7,) or not np.isfinite(u).all() or np.any(np.abs(u) > 1.00001):
-            raise ValueError("Residual must be finite (7,) in [-1, 1]")
+        if u.shape != (self.residual_dims,) or not np.isfinite(u).all() or np.any(np.abs(u) > 1.00001):
+            raise ValueError(f"Residual must be finite ({self.residual_dims},) in [-1, 1]")
+        if self.residual_dims == 6:
+            u = np.append(u, np.float32(0))
         delta = self.alpha * np.clip(u, -1, 1)
         if not self.residual_gripper:
             delta[-1] = 0

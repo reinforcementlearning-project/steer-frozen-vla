@@ -31,6 +31,10 @@ def main():
     p.add_argument("--resume", action="store_true")
     p.add_argument("--log-every", type=int, default=100)
     p.add_argument("--checkpoint-every", type=int, default=1000)
+    p.add_argument("--residual-dims", type=int, choices=(6, 7), default=7,
+                   help="6 = arm-only residual (SAC target entropy -6); 7 = original (gripper output ignored)")
+    p.add_argument("--random-direction", action="store_true",
+                   help="draw the perturbation direction per episode from +x/-x/+y/-y (default: fixed +y)")
     args = p.parse_args()
     if min(args.total_env_steps, args.batch_size, args.utd_ratio) < 1:
         p.error("steps, batch-size and utd-ratio must be positive")
@@ -39,8 +43,10 @@ def main():
         p.error("Run already exists; choose another run-dir or --resume")
     if args.resume:
         original = json.loads((run_dir / "base_config.json").read_text())["args"]
-        for key in ("suite", "task_id", "n_action_steps", "max_episode_steps", "alpha", "seed", "target", "distance_cm"):
-            if original[key] != vars(args)[key]:
+        defaults = {"residual_dims": 7, "random_direction": False}  # runs created before these flags
+        for key in ("suite", "task_id", "n_action_steps", "max_episode_steps", "alpha", "seed", "target", "distance_cm",
+                    "residual_dims", "random_direction"):
+            if original.get(key, defaults.get(key)) != vars(args)[key]:
                 p.error(f"Resume would change {key}; use the original setting")
     seed_everything(args.seed)
     artifacts = json.loads(Path("results/artifacts.json").read_text())
@@ -48,21 +54,27 @@ def main():
                         args.n_action_steps, args.seed)
     simulator = make_libero(args.suite, args.task_id, max_steps=args.max_episode_steps)
     if args.target:
-        simulator = DynamicLibero(simulator, PerturbationConfig(args.target, args.distance_cm / 100))
-    env = ResidualEnv(simulator, base, args.alpha, max_steps=args.max_episode_steps)
+        directions = ((0, 1), (0, -1), (1, 1), (1, -1)) if args.random_direction else ()
+        simulator = DynamicLibero(simulator, PerturbationConfig(args.target, args.distance_cm / 100,
+                                                                directions=directions))
+    elif args.random_direction:
+        p.error("--random-direction needs --target")
+    env = ResidualEnv(simulator, base, args.alpha, max_steps=args.max_episode_steps,
+                      residual_dims=args.residual_dims)
     agent = SACAgent(env.obs_dim, env.action_spec, SACConfig(device="cuda"))
     config = TrainerConfig(total_env_steps=args.total_env_steps,
         warmup_steps=args.warmup_steps, warmup_policy="zero",
         learning_starts=args.warmup_steps, batch_size=args.batch_size, utd_ratio=args.utd_ratio,
         buffer_capacity=max(10000, args.total_env_steps), eval_every=0,
         log_every=args.log_every, checkpoint_every=args.checkpoint_every, run_dir=str(run_dir), seed=args.seed,
-        episode_info_keys=["perturb_step", "perturb_dist"])
+        episode_info_keys=["perturb_step", "perturb_dist", "perturb_axis", "perturb_sign"])
     # Keep capacity fixed across short resume checks and ordinary 20k-step runs.
     config.buffer_capacity = 100000
     trainer = OffPolicyTrainer(env, agent, config)
     trainer.logger = TrainingMonitor(trainer.logger, run_dir)
     metadata = {"args": vars(args), "artifacts": artifacts,
-                "gripper_residual": False, "observation": "proprioception8+base_action7",
+                "gripper_residual": False, "residual_dims": args.residual_dims,
+                "sac_target_entropy": agent.target_entropy, "random_direction": args.random_direction, "observation": "proprioception8+base_action7",
                 "vla_budget": "initial query charged to first step", "evaluation_during_training": False}
     metadata["git_commit"] = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
     metadata["source_sha256_lf"] = {

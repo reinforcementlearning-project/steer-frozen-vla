@@ -59,3 +59,23 @@ def test_invalid_residual_rejected(value):
     env.reset()
     with pytest.raises(ValueError):
         env.step(value)
+
+
+def test_six_dim_residual_pads_zero_gripper():
+    raw = Env()
+    env = ResidualEnv(raw, Base(), alpha=.1, residual_dims=6)
+    assert env.action_spec.dim == 6
+    state, _ = env.reset(seed=0)
+    base = state[-7:].copy()
+    env.step(np.ones(6, np.float32))
+    np.testing.assert_allclose(raw.executed[:6], np.clip(base[:6] + .1, -1, 1))
+    assert raw.executed[-1] == base[-1]
+    with pytest.raises(ValueError):
+        env.step(np.zeros(7))
+
+
+def test_six_dim_target_entropy_is_minus_six():
+    from rl import SACAgent, SACConfig
+    env = ResidualEnv(Env(), Base(), residual_dims=6)
+    agent = SACAgent(env.obs_dim, env.action_spec, SACConfig(device="cpu"))
+    assert agent.target_entropy == -6
