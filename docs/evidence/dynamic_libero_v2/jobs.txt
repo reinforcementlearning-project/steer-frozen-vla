@@ -1,0 +1,11 @@
+monitor_0cm --preset no_perturbation --episodes 50 --eval-seed 0 --log-distance
+legacy_primary_py2 --set primary --condition +y2
+legacy_4cm_mx4 --set distance_4cm --condition=-x4
+timing_early_rand2 --set validation_timing --condition rand2 --override perturbation.timing=early
+timing_middle_rand2 --set validation_timing --condition rand2 --override perturbation.timing=middle
+timing_late_rand2 --set validation_timing --condition rand2 --override perturbation.timing=late
+chunk_pre_rand2 --set validation_timing --condition rand2 --override perturbation.chunk_phase=pre_replan
+chunk_post_rand2 --set validation_timing --condition rand2 --override perturbation.chunk_phase=post_replan
+chunk_mid_rand2 --set validation_timing --condition rand2 --override perturbation.chunk_phase=mid_chunk
+spatial_0cm --set spatial --condition 0cm
+spatial_rand2 --set validation_timing --condition rand2 --override spatial.mode=region_uniform
