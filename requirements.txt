@@ -1,5 +1,6 @@
 torch>=2.1
 numpy>=1.24
+pyyaml>=6  # configs/dynamic_libero_v2.yaml
 # optional: Pendulum sanity check / tests
 gymnasium>=0.29
 pytest>=7

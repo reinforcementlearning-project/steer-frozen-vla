@@ -18,6 +18,7 @@
 | `models/noise_wrapper.py` SmolVLA 노이즈 주입 (8-2) | 이다혜 | ⬜ |
 | `policies/noise_policy.py`, `train_dsrl.py` (8-3) | 이다혜 | ⬜ |
 | `envs/libero_env.py`, `envs/perturbation.py` (7-1, 7-2) | 이승연 | 정상·접근 중 0/2/4cm 교란 실행 검증 |
+| `envs/dynamic_libero.py`, `envs/dynamic_libero_config.py`, `configs/dynamic_libero_v2.yaml` | 이승연 | Dynamic LIBERO v2 공통 환경 (Early/Middle/Late, chunk phase, OOD 초기 위치). 사양·DSRL 연동: [docs/dynamic_libero_v2.md](docs/dynamic_libero_v2.md) |
 | `models/smolvla_wrapper.py` (7-1) | 이승연 | Frozen checkpoint 로딩·실제 성공 rollout·chunk 검증 |
 | `policies/residual_policy.py`, `train_residual.py` (7-3) | 이승연 | 공통 Trainer 업데이트·저장·재시작 검증, 본 학습 미완료 |
 | `evaluation/evaluate.py` | 이승연 주도 | ⬜ |
@@ -105,6 +106,7 @@ agent = SACAgent.from_checkpoint("results/residual_dyn_s0/checkpoints/latest.pt"
 - **Action Granularity**: Residual(매 제어 Step) vs Noise(매 Chunk) 실행 주기와 상호작용 수 명시
 - **보상**: 공통 성공 신호, Shaping 사용 여부와 설정 일치
 - 각자 독립적인 LIBERO 환경·평가 코드를 따로 작성하지 않는다.
+- **공통 환경:** `make_dynamic_libero(load_preset("train_v1"))`로 학습 환경을, `load_eval_set("primary")`로 공식 평가 조건을 만든다. split(train / eval_primary / eval_secondary / eval_ood / diagnostic)이 다른 결과는 섞지 않는다. 자세한 내용: [docs/dynamic_libero_v2.md](docs/dynamic_libero_v2.md)
 
 ## 검증 결과
 
