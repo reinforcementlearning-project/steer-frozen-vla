@@ -57,6 +57,8 @@ LIBERO / LeRobot / SmolVLA 의존성은 환경 모듈이 추가될 때 함께 �
 정규화·gripper·추론 주기, 교란 정의 및 실제 LIBERO에서 공통 Trainer를 검증하는 명령을 정리했다.
 [Day 1 검증 결과](docs/day1-results.md): 실제 성공 rollout, Action Chunk, 조건별 50회 교란 평가,
 공통 Trainer 업데이트·저장·재시작 및 원시 로그.
+[Residual-SAC seed 42 학습 기록](docs/residual-seed42-training.md): 보상·transition·행동 주기 검증,
+512-step 짧은 학습과 2cm 교란 본 학습 설정·저장 경로. 본 학습은 진행 상태를 확인해야 하며 완료로 표시하지 않는다.
 서버 작업은 `~/rf/steer-frozen-vla`에서 수행하며 기존 연구 환경은 읽어서 사용한다.
 
 현재 검증된 환경: Python 3.12.16, LeRobot 배포 메타데이터 0.6.2,

@@ -1,0 +1,29 @@
+{
+  "observed_at": "2026-11-24T11:21:41.320191+09:00",
+  "status": "running",
+  "pid": 2320893,
+  "run_dir": "results/residual_2cm_s42_20261124_20k",
+  "latest_logged_metrics": {
+    "env_step": "1900",
+    "grad_updates": "901",
+    "vla_calls": "196",
+    "episodes": "9",
+    "wall_time": "99.13033103942871",
+    "return_avg20": "0.6666666666666666",
+    "success_avg20": "0.6666666666666666",
+    "buffer_size": "1900",
+    "sps": "19.16668672521917",
+    "gpu_mem_gb": "1.278538752",
+    "actor_loss": "-2.3435888290405273",
+    "critic_loss": "0.009060036391019821",
+    "q1_mean": "1.994560956954956",
+    "q_target_mean": "1.9970535039901733",
+    "entropy": "4.789253234863281",
+    "alpha_loss": "-30.330381393432617",
+    "alpha": "0.07630519568920135"
+  },
+  "checkpoint_env_steps": 1000,
+  "replay_size": 1000,
+  "common_sac_unchanged_from_f0687f4": true,
+  "curve_exists": true
+}

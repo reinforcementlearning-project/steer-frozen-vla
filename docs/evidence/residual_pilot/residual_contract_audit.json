@@ -1,0 +1,2147 @@
+{
+  "passed": true,
+  "reward": "float(task_success), sparse 0/1, no shaping or residual penalty",
+  "n_action_steps": 10,
+  "transition_unit": "one control step",
+  "residual_period_steps": 1,
+  "replay_size": 123,
+  "vla_query_steps": [
+    0,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    110,
+    120
+  ],
+  "success": true,
+  "events": [
+    {
+      "step": 29,
+      "config": {
+        "target": "alphabet_soup_1",
+        "distance_m": 0.02,
+        "earliest_step": 10,
+        "approach_min_m": 0.05,
+        "approach_max_m": 0.18,
+        "axis": 1,
+        "direction": 1
+      },
+      "before": [
+        -0.1190942554821374,
+        -0.23978121719843148,
+        0.03839291037244387
+      ],
+      "after": [
+        -0.1190942554821374,
+        -0.2197812171984315,
+        0.03839291037244387
+      ],
+      "eef_distance": 0.17605015661545553,
+      "robot_contact_before": false,
+      "applied": true,
+      "rejection": null,
+      "actual_displacement_m": 0.01999999999999999
+    }
+  ],
+  "transitions": [
+    {
+      "env_step": 1,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 1,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 2,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        -0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 3,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 4,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        -0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 5,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 6,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        -0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 7,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 8,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        -0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 9,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 10,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 1,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        -0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 11,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 12,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        -0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 13,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 14,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        -0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 15,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 16,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        -0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 17,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 18,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        -0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 19,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 20,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 1,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        -0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 21,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.05000000074505806,
+      "action": [
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 22,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 23,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 24,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 25,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 26,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 27,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 28,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 29,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 30,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 1,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 31,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 32,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 33,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 34,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 35,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 36,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 37,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 38,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 39,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 40,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 1,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 41,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 42,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 43,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 44,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 45,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 46,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 47,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 48,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 49,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 50,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 1,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 51,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 52,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 53,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 54,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 55,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 56,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 57,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 58,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 59,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 60,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 1,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 61,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 62,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 63,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 64,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 65,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 66,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 67,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 68,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 69,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 70,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 1,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 71,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 72,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 73,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 74,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 75,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 76,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 77,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 78,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 79,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 80,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 1,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 81,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 82,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 83,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 84,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 85,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 86,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 87,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 88,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 89,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 90,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 1,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 91,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 92,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 93,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 94,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 95,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 96,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 97,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 98,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 99,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 100,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 1,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 101,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 102,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 103,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 104,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 105,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 106,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 107,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 108,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 109,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 110,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 1,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 111,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 112,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 113,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 114,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 115,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 116,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 117,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 118,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 119,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 120,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 1,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 121,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 122,
+      "reward": 0.0,
+      "terminated": false,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "env_step": 123,
+      "reward": 1.0,
+      "terminated": true,
+      "truncated": false,
+      "vla_calls": 0,
+      "residual_norm": 0.0,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "time_limit_bootstraps": "replay dones stores terminated only"
+}

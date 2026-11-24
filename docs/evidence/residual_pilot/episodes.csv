@@ -1,0 +1,3 @@
+env_step,episode,return,length,success,vla_calls,grad_updates,wall_time,perturb_step,perturb_dist
+124,1,1.0,124,1,13,0,5.812594890594482,29,0.02
+253,2,1.0,129,1,26,0,12.925047874450684,35,0.02

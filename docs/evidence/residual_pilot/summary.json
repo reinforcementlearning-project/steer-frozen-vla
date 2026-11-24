@@ -1,0 +1,17 @@
+{
+  "env_steps": 512,
+  "grad_updates": 257,
+  "vla_calls": 52,
+  "metrics": {
+    "critic_loss": 0.0019380288431420922,
+    "q1_mean": 0.829592227935791,
+    "q_target_mean": 0.8258271217346191,
+    "actor_loss": -1.2696973085403442,
+    "entropy": 4.800785064697266,
+    "alpha_loss": -28.07921600341797,
+    "alpha": 0.09257497638463974
+  },
+  "actor_changed": true,
+  "critic_changed": true,
+  "vla_frozen": true
+}
