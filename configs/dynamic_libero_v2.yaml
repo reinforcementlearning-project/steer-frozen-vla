@@ -1,0 +1,133 @@
+# Dynamic LIBERO v2: shared simulator settings for Residual-SAC and DSRL-SAC.
+# Loaded by envs/dynamic_libero_config.py (load_preset / load_eval_set / make_dynamic_libero).
+# Spec, validation and usage: docs/dynamic_libero_v2.md
+#
+# split:
+#   train          - distribution an RL method may train on
+#   eval_primary   - official comparison metric (do not mix with the others)
+#   eval_secondary - supplementary evaluation axes NOT used for training (Middle/Late timing,
+#                    4 cm, chunk phase), reported separately from the primary metric
+#   eval_ood       - out-of-distribution option: shifted initial object position (off by default)
+#   diagnostic     - diagnostics only (e.g. 400-step horizon), never a comparison metric
+#   legacy         - v1 behaviour, kept for reproducing earlier results
+#
+# Every new feature is opt-in: with the defaults below the wrapper behaves exactly like the
+# v1 18 cm-entry rule (envs/perturbation.py) and reproduces earlier results.
+# Official training and evaluation: original LIBERO init states, 280 steps.
+version: 2
+
+defaults:
+  split: legacy
+  suite: libero_object
+  task_id: 0
+  target: alphabet_soup_1
+  max_steps: 280
+  n_action_steps: 10
+  episodes: null
+  eval_seed: null
+  perturbation:
+    timing: legacy            # EEF-target distance window [0.05, 0.18] m, first eligible step
+    directions: ["+y"]
+    distances_m: [0.02]
+    window_m: null
+    chunk_phase: null
+    earliest_step: 10
+    lift_tolerance_m: 0.015
+    workspace_limit_m: 0.45
+    penetration_tolerance_m: 0.003
+  spatial:
+    mode: none
+
+presets:
+  # Reference training condition shared by Residual-SAC and DSRL-SAC ("Early 18 cm"):
+  # the v1 rule (first eligible step within 18 cm of the target, in practice 17.1-18.0 cm),
+  # one of +x/-x/+y/-y drawn per episode from the reset seed, 2 cm, 280 steps, original
+  # LIBERO init states. Same stream as the Residual-SAC 6d_rand_fixa001 runs.
+  train_v1:
+    split: train
+    description: "Early 18cm (legacy rule), random +-x/+-y 2cm per episode, 280 steps"
+    perturbation:
+      directions: ["+x", "-x", "+y", "-y"]   # order matters: index drawn from rng([seed, 0x5EED])
+      distances_m: [0.02]
+  # v1 single-direction defaults (scripts/smoke_rollout.py, train_residual.py on main)
+  legacy_y2:
+    split: legacy
+    description: "v1 default: +y 2cm, legacy timing"
+  no_perturbation:
+    split: diagnostic
+    description: "frozen scene, no perturbation (trajectory/feasibility logging)"
+    perturbation: null
+
+eval_sets:
+  # ---- official comparison (M1/M2): original LIBERO init states, legacy (= early entry)
+  # timing, +-x/+-y 2cm, 280 steps, 50 episodes, eval seed 0 (episode i -> seed i, init state i)
+  primary:
+    split: eval_primary
+    episodes: 50
+    eval_seed: 0
+    conditions: ["0cm", "+x2", "-x2", "+y2", "-y2"]
+
+  # ---- supplementary axes (not trained on), each reported on its own
+  distance_4cm:
+    split: eval_secondary
+    episodes: 50
+    eval_seed: 0
+    conditions: ["+x4", "-x4", "+y4", "-y4"]
+  timing_early:              # explicit 15-18 cm window (in practice the same steps as training)
+    split: eval_secondary
+    episodes: 50
+    eval_seed: 0
+    perturbation: {timing: early}
+    conditions: ["+x2", "-x2", "+y2", "-y2"]
+  timing_middle:
+    split: eval_secondary
+    episodes: 50
+    eval_seed: 0
+    perturbation: {timing: middle}
+    conditions: ["+x2", "-x2", "+y2", "-y2"]
+  timing_late:
+    split: eval_secondary
+    episodes: 50
+    eval_seed: 0
+    perturbation: {timing: late}
+    conditions: ["+x2", "-x2", "+y2", "-y2"]
+  chunk_pre_replan:
+    split: eval_secondary
+    episodes: 50
+    eval_seed: 0
+    perturbation: {chunk_phase: pre_replan}
+    conditions: ["+x2", "-x2", "+y2", "-y2"]
+  chunk_post_replan:
+    split: eval_secondary
+    episodes: 50
+    eval_seed: 0
+    perturbation: {chunk_phase: post_replan}
+    conditions: ["+x2", "-x2", "+y2", "-y2"]
+  chunk_mid:
+    split: eval_secondary
+    episodes: 50
+    eval_seed: 0
+    perturbation: {chunk_phase: mid_chunk}
+    conditions: ["+x2", "-x2", "+y2", "-y2"]
+  # ---- OOD option only: shifted initial target position (never used for training or the
+  # official comparison)
+  ood_spatial:
+    split: eval_ood
+    episodes: 50
+    eval_seed: 0
+    spatial: {mode: region_uniform, max_offset_m: 0.025}
+    conditions: ["0cm", "+x2", "-x2", "+y2", "-y2"]
+
+  # ---- diagnostics (never a comparison metric)
+  horizon400:
+    split: diagnostic
+    episodes: 50
+    eval_seed: 0
+    max_steps: 400
+    conditions: ["+y4", "-y4"]
+  # environment validation runs used in docs/dynamic_libero_v2.md (random direction per episode)
+  validation_timing:
+    split: diagnostic
+    episodes: 50
+    eval_seed: 0
+    conditions: ["rand2"]

@@ -1,0 +1,887 @@
+{
+  "feasibility": [
+    {
+      "window": "legacy",
+      "window_m": [
+        0.05,
+        0.18
+      ],
+      "chunk_phase": null,
+      "episodes": 50,
+      "reachable_episodes": 50,
+      "reachable_rate": 1.0,
+      "first_step_median": 34.0,
+      "first_step_range": [
+        27,
+        39
+      ],
+      "distance_at_first_median": 0.1765
+    },
+    {
+      "window": "legacy",
+      "window_m": [
+        0.05,
+        0.18
+      ],
+      "chunk_phase": 0,
+      "episodes": 50,
+      "reachable_episodes": 50,
+      "reachable_rate": 1.0,
+      "first_step_median": 40.0,
+      "first_step_range": [
+        30,
+        40
+      ],
+      "distance_at_first_median": 0.1209
+    },
+    {
+      "window": "legacy",
+      "window_m": [
+        0.05,
+        0.18
+      ],
+      "chunk_phase": 1,
+      "episodes": 50,
+      "reachable_episodes": 50,
+      "reachable_rate": 1.0,
+      "first_step_median": 41.0,
+      "first_step_range": [
+        31,
+        41
+      ],
+      "distance_at_first_median": 0.1141
+    },
+    {
+      "window": "legacy",
+      "window_m": [
+        0.05,
+        0.18
+      ],
+      "chunk_phase": 5,
+      "episodes": 50,
+      "reachable_episodes": 50,
+      "reachable_rate": 1.0,
+      "first_step_median": 35.0,
+      "first_step_range": [
+        35,
+        45
+      ],
+      "distance_at_first_median": 0.1555
+    },
+    {
+      "window": "early",
+      "window_m": [
+        0.15,
+        0.18
+      ],
+      "chunk_phase": null,
+      "episodes": 50,
+      "reachable_episodes": 50,
+      "reachable_rate": 1.0,
+      "first_step_median": 34.0,
+      "first_step_range": [
+        27,
+        39
+      ],
+      "distance_at_first_median": 0.1765
+    },
+    {
+      "window": "early",
+      "window_m": [
+        0.15,
+        0.18
+      ],
+      "chunk_phase": 0,
+      "episodes": 50,
+      "reachable_episodes": 17,
+      "reachable_rate": 0.34,
+      "first_step_median": 40.0,
+      "first_step_range": [
+        30,
+        110
+      ],
+      "distance_at_first_median": 0.1628
+    },
+    {
+      "window": "early",
+      "window_m": [
+        0.15,
+        0.18
+      ],
+      "chunk_phase": 1,
+      "episodes": 50,
+      "reachable_episodes": 15,
+      "reachable_rate": 0.3,
+      "first_step_median": 31.0,
+      "first_step_range": [
+        31,
+        111
+      ],
+      "distance_at_first_median": 0.1675
+    },
+    {
+      "window": "early",
+      "window_m": [
+        0.15,
+        0.18
+      ],
+      "chunk_phase": 5,
+      "episodes": 50,
+      "reachable_episodes": 31,
+      "reachable_rate": 0.62,
+      "first_step_median": 35.0,
+      "first_step_range": [
+        35,
+        115
+      ],
+      "distance_at_first_median": 0.1633
+    },
+    {
+      "window": "middle",
+      "window_m": [
+        0.1,
+        0.15
+      ],
+      "chunk_phase": null,
+      "episodes": 50,
+      "reachable_episodes": 50,
+      "reachable_rate": 1.0,
+      "first_step_median": 37.0,
+      "first_step_range": [
+        31,
+        42
+      ],
+      "distance_at_first_median": 0.1444
+    },
+    {
+      "window": "middle",
+      "window_m": [
+        0.1,
+        0.15
+      ],
+      "chunk_phase": 0,
+      "episodes": 50,
+      "reachable_episodes": 33,
+      "reachable_rate": 0.66,
+      "first_step_median": 40.0,
+      "first_step_range": [
+        40,
+        80
+      ],
+      "distance_at_first_median": 0.1181
+    },
+    {
+      "window": "middle",
+      "window_m": [
+        0.1,
+        0.15
+      ],
+      "chunk_phase": 1,
+      "episodes": 50,
+      "reachable_episodes": 33,
+      "reachable_rate": 0.66,
+      "first_step_median": 41.0,
+      "first_step_range": [
+        31,
+        71
+      ],
+      "distance_at_first_median": 0.1134
+    },
+    {
+      "window": "middle",
+      "window_m": [
+        0.1,
+        0.15
+      ],
+      "chunk_phase": 5,
+      "episodes": 50,
+      "reachable_episodes": 20,
+      "reachable_rate": 0.4,
+      "first_step_median": 40.0,
+      "first_step_range": [
+        35,
+        75
+      ],
+      "distance_at_first_median": 0.1235
+    },
+    {
+      "window": "late",
+      "window_m": [
+        0.05,
+        0.1
+      ],
+      "chunk_phase": null,
+      "episodes": 50,
+      "reachable_episodes": 50,
+      "reachable_rate": 1.0,
+      "first_step_median": 42.0,
+      "first_step_range": [
+        37,
+        46
+      ],
+      "distance_at_first_median": 0.0949
+    },
+    {
+      "window": "late",
+      "window_m": [
+        0.05,
+        0.1
+      ],
+      "chunk_phase": 0,
+      "episodes": 50,
+      "reachable_episodes": 19,
+      "reachable_rate": 0.38,
+      "first_step_median": 40.0,
+      "first_step_range": [
+        40,
+        80
+      ],
+      "distance_at_first_median": 0.0797
+    },
+    {
+      "window": "late",
+      "window_m": [
+        0.05,
+        0.1
+      ],
+      "chunk_phase": 1,
+      "episodes": 50,
+      "reachable_episodes": 24,
+      "reachable_rate": 0.48,
+      "first_step_median": 41.0,
+      "first_step_range": [
+        41,
+        81
+      ],
+      "distance_at_first_median": 0.077
+    },
+    {
+      "window": "late",
+      "window_m": [
+        0.05,
+        0.1
+      ],
+      "chunk_phase": 5,
+      "episodes": 50,
+      "reachable_episodes": 35,
+      "reachable_rate": 0.7,
+      "first_step_median": 45.0,
+      "first_step_range": [
+        45,
+        85
+      ],
+      "distance_at_first_median": 0.0704
+    }
+  ],
+  "frozen_trajectory": {
+    "min_distance_median": 0.0131,
+    "first_contact_step_median": 49.0,
+    "distance_at_first_contact_median": 0.02,
+    "episodes_with_contact": 50
+  },
+  "runs": [
+    {
+      "run": "chunk_mid_rand2",
+      "config": "validation_timing/rand2",
+      "split": "diagnostic",
+      "timing": "legacy",
+      "window_m": [
+        0.05,
+        0.18
+      ],
+      "chunk_phase": "mid_chunk",
+      "spatial": "none",
+      "max_steps": 280,
+      "episodes": 50,
+      "applied": 50,
+      "rejected": 0,
+      "not_triggered": 0,
+      "disabled": 0,
+      "applied_rate": 1.0,
+      "non_applied_reasons": {},
+      "displacement_matches_config": "50/50",
+      "trigger_step_min": 35,
+      "trigger_step_median": 35.0,
+      "trigger_step_max": 45,
+      "eef_distance_min": 0.0829,
+      "eef_distance_max": 0.1789,
+      "chunk_phase_hist": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        50,
+        0,
+        0,
+        0,
+        0
+      ],
+      "directions": {
+        "+x": 16,
+        "-x": 11,
+        "-y": 12,
+        "+y": 11
+      },
+      "replan_cadence_ok": "50/50",
+      "successes": 45,
+      "success_rate": 0.9,
+      "success_wilson95": [
+        0.7864,
+        0.9565
+      ]
+    },
+    {
+      "run": "chunk_post_rand2",
+      "config": "validation_timing/rand2",
+      "split": "diagnostic",
+      "timing": "legacy",
+      "window_m": [
+        0.05,
+        0.18
+      ],
+      "chunk_phase": "post_replan",
+      "spatial": "none",
+      "max_steps": 280,
+      "episodes": 50,
+      "applied": 50,
+      "rejected": 0,
+      "not_triggered": 0,
+      "disabled": 0,
+      "applied_rate": 1.0,
+      "non_applied_reasons": {},
+      "displacement_matches_config": "50/50",
+      "trigger_step_min": 31,
+      "trigger_step_median": 41.0,
+      "trigger_step_max": 41,
+      "eef_distance_min": 0.0872,
+      "eef_distance_max": 0.1781,
+      "chunk_phase_hist": [
+        0,
+        50,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "directions": {
+        "+x": 16,
+        "-x": 11,
+        "-y": 12,
+        "+y": 11
+      },
+      "replan_cadence_ok": "50/50",
+      "successes": 45,
+      "success_rate": 0.9,
+      "success_wilson95": [
+        0.7864,
+        0.9565
+      ]
+    },
+    {
+      "run": "chunk_pre_rand2",
+      "config": "validation_timing/rand2",
+      "split": "diagnostic",
+      "timing": "legacy",
+      "window_m": [
+        0.05,
+        0.18
+      ],
+      "chunk_phase": "pre_replan",
+      "spatial": "none",
+      "max_steps": 280,
+      "episodes": 50,
+      "applied": 50,
+      "rejected": 0,
+      "not_triggered": 0,
+      "disabled": 0,
+      "applied_rate": 1.0,
+      "non_applied_reasons": {},
+      "displacement_matches_config": "50/50",
+      "trigger_step_min": 30,
+      "trigger_step_median": 40.0,
+      "trigger_step_max": 40,
+      "eef_distance_min": 0.0812,
+      "eef_distance_max": 0.1751,
+      "chunk_phase_hist": [
+        50,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "directions": {
+        "+x": 16,
+        "-x": 11,
+        "-y": 12,
+        "+y": 11
+      },
+      "replan_cadence_ok": "50/50",
+      "successes": 43,
+      "success_rate": 0.86,
+      "success_wilson95": [
+        0.7381,
+        0.9305
+      ]
+    },
+    {
+      "run": "legacy_4cm_mx4",
+      "config": "distance_4cm/-x4",
+      "split": "eval_secondary",
+      "timing": "legacy",
+      "window_m": [
+        0.05,
+        0.18
+      ],
+      "chunk_phase": null,
+      "spatial": "none",
+      "max_steps": 280,
+      "episodes": 50,
+      "applied": 50,
+      "rejected": 0,
+      "not_triggered": 0,
+      "disabled": 0,
+      "applied_rate": 1.0,
+      "non_applied_reasons": {},
+      "displacement_matches_config": "50/50",
+      "trigger_step_min": 27,
+      "trigger_step_median": 34.0,
+      "trigger_step_max": 39,
+      "eef_distance_min": 0.1714,
+      "eef_distance_max": 0.1799,
+      "chunk_phase_hist": [
+        1,
+        3,
+        2,
+        11,
+        11,
+        5,
+        4,
+        5,
+        5,
+        3
+      ],
+      "directions": {
+        "-x": 50
+      },
+      "replan_cadence_ok": "50/50",
+      "successes": 33,
+      "success_rate": 0.66,
+      "success_wilson95": [
+        0.5215,
+        0.7756
+      ]
+    },
+    {
+      "run": "legacy_primary_py2",
+      "config": "primary/+y2",
+      "split": "eval_primary",
+      "timing": "legacy",
+      "window_m": [
+        0.05,
+        0.18
+      ],
+      "chunk_phase": null,
+      "spatial": "none",
+      "max_steps": 280,
+      "episodes": 50,
+      "applied": 50,
+      "rejected": 0,
+      "not_triggered": 0,
+      "disabled": 0,
+      "applied_rate": 1.0,
+      "non_applied_reasons": {},
+      "displacement_matches_config": "50/50",
+      "trigger_step_min": 27,
+      "trigger_step_median": 34.0,
+      "trigger_step_max": 39,
+      "eef_distance_min": 0.1714,
+      "eef_distance_max": 0.1799,
+      "chunk_phase_hist": [
+        1,
+        3,
+        2,
+        11,
+        11,
+        5,
+        4,
+        5,
+        5,
+        3
+      ],
+      "directions": {
+        "+y": 50
+      },
+      "replan_cadence_ok": "50/50",
+      "successes": 34,
+      "success_rate": 0.68,
+      "success_wilson95": [
+        0.5419,
+        0.7924
+      ]
+    },
+    {
+      "run": "monitor_0cm",
+      "config": "no_perturbation",
+      "split": "diagnostic",
+      "timing": null,
+      "window_m": null,
+      "chunk_phase": null,
+      "spatial": "none",
+      "max_steps": 280,
+      "episodes": 50,
+      "applied": 0,
+      "rejected": 0,
+      "not_triggered": 0,
+      "disabled": 50,
+      "applied_rate": 0.0,
+      "non_applied_reasons": {
+        "disabled:None": 50
+      },
+      "displacement_matches_config": "0/0",
+      "trigger_step_min": null,
+      "trigger_step_median": null,
+      "trigger_step_max": null,
+      "eef_distance_min": null,
+      "eef_distance_max": null,
+      "chunk_phase_hist": null,
+      "directions": {},
+      "replan_cadence_ok": "50/50",
+      "successes": 45,
+      "success_rate": 0.9,
+      "success_wilson95": [
+        0.7864,
+        0.9565
+      ]
+    },
+    {
+      "run": "spatial_0cm",
+      "config": "spatial/0cm",
+      "split": "eval_secondary",
+      "timing": "legacy",
+      "window_m": [
+        0.05,
+        0.18
+      ],
+      "chunk_phase": null,
+      "spatial": "region_uniform",
+      "max_steps": 280,
+      "episodes": 50,
+      "applied": 50,
+      "rejected": 0,
+      "not_triggered": 0,
+      "disabled": 0,
+      "applied_rate": 1.0,
+      "non_applied_reasons": {},
+      "displacement_matches_config": "50/50",
+      "trigger_step_min": 23,
+      "trigger_step_median": 28.5,
+      "trigger_step_max": 32,
+      "eef_distance_min": 0.1711,
+      "eef_distance_max": 0.18,
+      "chunk_phase_hist": [
+        5,
+        4,
+        6,
+        2,
+        2,
+        2,
+        6,
+        3,
+        10,
+        10
+      ],
+      "directions": {
+        "+y": 50
+      },
+      "replan_cadence_ok": "50/50",
+      "successes": 46,
+      "success_rate": 0.92,
+      "success_wilson95": [
+        0.8116,
+        0.9685
+      ],
+      "spatial_applied": "50/50",
+      "spatial_offset_abs_mean_cm": [
+        1.12,
+        1.26
+      ],
+      "spatial_offset_range_cm": [
+        [
+          -2.42,
+          -2.4
+        ],
+        [
+          2.17,
+          2.46
+        ]
+      ],
+      "spatial_attempts_mean": 1.02,
+      "spatial_rejections": {
+        "outside_bddl_init_region": 1
+      },
+      "spatial_unique_offsets": 50
+    },
+    {
+      "run": "spatial_rand2",
+      "config": "validation_timing/rand2",
+      "split": "diagnostic",
+      "timing": "legacy",
+      "window_m": [
+        0.05,
+        0.18
+      ],
+      "chunk_phase": null,
+      "spatial": "region_uniform",
+      "max_steps": 280,
+      "episodes": 50,
+      "applied": 50,
+      "rejected": 0,
+      "not_triggered": 0,
+      "disabled": 0,
+      "applied_rate": 1.0,
+      "non_applied_reasons": {},
+      "displacement_matches_config": "50/50",
+      "trigger_step_min": 23,
+      "trigger_step_median": 28.5,
+      "trigger_step_max": 32,
+      "eef_distance_min": 0.1711,
+      "eef_distance_max": 0.18,
+      "chunk_phase_hist": [
+        5,
+        4,
+        6,
+        2,
+        2,
+        2,
+        6,
+        3,
+        10,
+        10
+      ],
+      "directions": {
+        "+x": 16,
+        "-x": 11,
+        "-y": 12,
+        "+y": 11
+      },
+      "replan_cadence_ok": "50/50",
+      "successes": 37,
+      "success_rate": 0.74,
+      "success_wilson95": [
+        0.6045,
+        0.8413
+      ],
+      "spatial_applied": "50/50",
+      "spatial_offset_abs_mean_cm": [
+        1.12,
+        1.26
+      ],
+      "spatial_offset_range_cm": [
+        [
+          -2.42,
+          -2.4
+        ],
+        [
+          2.17,
+          2.46
+        ]
+      ],
+      "spatial_attempts_mean": 1.02,
+      "spatial_rejections": {
+        "outside_bddl_init_region": 1
+      },
+      "spatial_unique_offsets": 50
+    },
+    {
+      "run": "timing_early_rand2",
+      "config": "validation_timing/rand2",
+      "split": "diagnostic",
+      "timing": "early",
+      "window_m": [
+        0.15,
+        0.18
+      ],
+      "chunk_phase": null,
+      "spatial": "none",
+      "max_steps": 280,
+      "episodes": 50,
+      "applied": 50,
+      "rejected": 0,
+      "not_triggered": 0,
+      "disabled": 0,
+      "applied_rate": 1.0,
+      "non_applied_reasons": {},
+      "displacement_matches_config": "50/50",
+      "trigger_step_min": 27,
+      "trigger_step_median": 34.0,
+      "trigger_step_max": 39,
+      "eef_distance_min": 0.1714,
+      "eef_distance_max": 0.1799,
+      "chunk_phase_hist": [
+        1,
+        3,
+        2,
+        11,
+        11,
+        5,
+        4,
+        5,
+        5,
+        3
+      ],
+      "directions": {
+        "+x": 16,
+        "-x": 11,
+        "-y": 12,
+        "+y": 11
+      },
+      "replan_cadence_ok": "50/50",
+      "successes": 45,
+      "success_rate": 0.9,
+      "success_wilson95": [
+        0.7864,
+        0.9565
+      ]
+    },
+    {
+      "run": "timing_late_rand2",
+      "config": "validation_timing/rand2",
+      "split": "diagnostic",
+      "timing": "late",
+      "window_m": [
+        0.05,
+        0.1
+      ],
+      "chunk_phase": null,
+      "spatial": "none",
+      "max_steps": 280,
+      "episodes": 50,
+      "applied": 50,
+      "rejected": 0,
+      "not_triggered": 0,
+      "disabled": 0,
+      "applied_rate": 1.0,
+      "non_applied_reasons": {},
+      "displacement_matches_config": "50/50",
+      "trigger_step_min": 37,
+      "trigger_step_median": 42.0,
+      "trigger_step_max": 46,
+      "eef_distance_min": 0.0891,
+      "eef_distance_max": 0.0997,
+      "chunk_phase_hist": [
+        4,
+        5,
+        12,
+        9,
+        4,
+        3,
+        5,
+        3,
+        3,
+        2
+      ],
+      "directions": {
+        "+x": 16,
+        "-x": 11,
+        "-y": 12,
+        "+y": 11
+      },
+      "replan_cadence_ok": "50/50",
+      "successes": 44,
+      "success_rate": 0.88,
+      "success_wilson95": [
+        0.7619,
+        0.9438
+      ]
+    },
+    {
+      "run": "timing_middle_rand2",
+      "config": "validation_timing/rand2",
+      "split": "diagnostic",
+      "timing": "middle",
+      "window_m": [
+        0.1,
+        0.15
+      ],
+      "chunk_phase": null,
+      "spatial": "none",
+      "max_steps": 280,
+      "episodes": 50,
+      "applied": 50,
+      "rejected": 0,
+      "not_triggered": 0,
+      "disabled": 0,
+      "applied_rate": 1.0,
+      "non_applied_reasons": {},
+      "displacement_matches_config": "50/50",
+      "trigger_step_min": 32,
+      "trigger_step_median": 37.0,
+      "trigger_step_max": 42,
+      "eef_distance_min": 0.1404,
+      "eef_distance_max": 0.15,
+      "chunk_phase_hist": [
+        3,
+        5,
+        5,
+        1,
+        3,
+        2,
+        7,
+        14,
+        7,
+        3
+      ],
+      "directions": {
+        "+x": 16,
+        "-x": 11,
+        "-y": 12,
+        "+y": 11
+      },
+      "replan_cadence_ok": "50/50",
+      "successes": 46,
+      "success_rate": 0.92,
+      "success_wilson95": [
+        0.8116,
+        0.9685
+      ]
+    }
+  ],
+  "legacy_reproduction": [
+    {
+      "run": "legacy_4cm_mx4",
+      "reference": "../steer-frozen-vla/results/residual_robustness/evals/base_mx4.json",
+      "episodes": 50,
+      "initial_state_hash": 50,
+      "success": 50,
+      "env_steps": 50,
+      "event_step": 50,
+      "event_before": 50,
+      "event_after": 50,
+      "event_applied": 50,
+      "event_eef_distance": 50
+    },
+    {
+      "run": "legacy_primary_py2",
+      "reference": "../steer-frozen-vla/results/residual_robustness/evals/base_py2.json",
+      "episodes": 50,
+      "initial_state_hash": 50,
+      "success": 50,
+      "env_steps": 50,
+      "event_step": 50,
+      "event_before": 50,
+      "event_after": 50,
+      "event_applied": 50,
+      "event_eef_distance": 50
+    }
+  ]
+}
