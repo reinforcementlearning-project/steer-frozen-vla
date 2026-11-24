@@ -1,0 +1,15 @@
+policy,distance_cm,episodes_all_triggered,max_abs_obs_diff_before_trigger,trigger_step_identical_episodes,resp_ratio_k1_20
+base,2,50,0.0,50,
+base,4,50,0.0,50,
+s42_val,2,50,0.0,50,0.0713
+s42_val,4,50,0.0,50,0.0874
+s42_final,2,50,0.0,50,0.0583
+s42_final,4,50,0.0,50,0.0659
+s43_val,2,50,0.0,50,0.0901
+s43_val,4,50,0.0,50,0.1125
+s43_final,2,50,0.0,50,0.0914
+s43_final,4,50,0.0,50,0.1003
+s44_val,2,50,0.0,50,0.0727
+s44_val,4,50,0.0,50,0.0911
+s44_final,2,50,0.0,50,0.0391
+s44_final,4,50,0.0,50,0.0501

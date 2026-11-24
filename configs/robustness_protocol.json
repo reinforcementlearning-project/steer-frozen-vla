@@ -1,0 +1,40 @@
+{
+  "written": "2026-11-24, before seed 43/44 validation or test results were available",
+  "candidate": {
+    "base_policy": "lerobot/smolvla_libero (frozen)",
+    "task": "LIBERO-Object task 0, n_action_steps=10, max 280 steps",
+    "residual": "6D arm residual, no gripper correction, residual scale 0.1",
+    "sac": "shared rl/ SAC, autotune_alpha=False, entropy coefficient 0.01, other SACConfig defaults",
+    "training": "random +-x/+-y 2cm per episode, 20000 env steps, warmup 1000 (zero residual), batch 256, UTD 1, sparse success reward",
+    "seeds": [42, 43, 44],
+    "launcher": "scripts/launch_residual_variant.sh 6d_rand_fixa001 <gpu> <seed>"
+  },
+  "checkpoint_selection": "configs/validation_rule.json (ckpt 2k-20k, +-x/+-y 2cm x 10 episodes, eval seed 1000, highest score, ties -> later)",
+  "test": {
+    "conditions": ["0cm", "+y 2cm", "-y 2cm", "+x 2cm", "-x 2cm", "+y 4cm", "-y 4cm", "+x 4cm", "-x 4cm"],
+    "episodes_per_condition": 50,
+    "eval_seed": 0,
+    "pairing": "episode i: reset/noise seed i, LIBERO initial state i, identical for every policy (frozen base included)",
+    "policy_action": "deterministic tanh(mu)"
+  },
+  "primary_policy": "validation-selected checkpoint of each training seed (s<seed>_val)",
+  "primary_metrics": {
+    "M1": "0cm success difference vs frozen base",
+    "M2": "equal-weight mean success over +-x/+-y 2cm, difference vs frozen base",
+    "M3": "equal-weight mean success over +-x/+-y 4cm, difference vs frozen base"
+  },
+  "primary_tests": "per seed and metric (9 tests): paired sign-flip permutation test on per-episode differences d_i = mean over the metric's conditions of (residual_i - base_i), 200000 Monte Carlo sign flips (seed 0); Holm correction over the 9 tests; 95% paired bootstrap CI over episode indices (10000 resamples, seed 0)",
+  "secondary": {
+    "M4": "per distance: min, max and range of the four direction success rates (descriptive)",
+    "seed_variability": "mean, SD and range of M1-M3 over the 3 training seeds (descriptive, n=3)",
+    "final_checkpoints": "same metrics for the 20k checkpoints (exploratory)"
+  },
+  "exploratory": [
+    "per-condition exact McNemar vs base (27 per policy set, unadjusted, flagged exploratory)",
+    "C1 residual before/after perturbation, by direction and time after perturbation",
+    "C2 direction-conditional response using the four direction runs as branches from the identical pre-perturbation state",
+    "C3 alpha=0 wrapper sanity check (seed 42 final, 3 conditions)",
+    "post-perturbation residual ablation of each primary policy on the 8 perturbed conditions"
+  ],
+  "independence_caveat": "Seed 42's configuration (fixed coefficient, 6D, random direction) was chosen after inspecting test-seed (eval seed 0) results of earlier runs, so seed-42 test results are not a fully independent final test. Seeds 43/44 test results were not used for any choice."
+}

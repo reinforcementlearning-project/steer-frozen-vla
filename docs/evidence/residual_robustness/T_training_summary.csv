@@ -1,0 +1,4 @@
+seed,env_steps,grad_updates,episodes,train_successes,success_transitions,success_transition_frac,entropy_coef,policy_entropy_min_after_2k,policy_entropy_last,entropy_collapse_below_0,q1_mean_last,q1_mean_max,critic_loss_late_mean,actor_loss_last,episode_residual_norm_last5k_mean,episode_residual_sat_last5k_mean,train_success_last5k,selected_checkpoint_step,selected_val_score,final_val_score
+42,20000,19001,109,83,83,0.00415,0.01,3.0777,3.8327,False,2.1372,2.1946,0.00046,-2.1741,0.1418,0.0163,0.8276,12000,35,32
+43,20000,19001,107,81,81,0.00405,0.01,3.3242,3.7139,False,2.188,2.197,0.00084,-2.235,0.1393,0.01106,0.8519,7000,35,31
+44,20000,19001,114,95,95,0.00475,0.01,3.5206,4.0153,False,2.1701,2.1701,0.00072,-2.2031,0.1399,0.01615,0.9032,6000,36,28

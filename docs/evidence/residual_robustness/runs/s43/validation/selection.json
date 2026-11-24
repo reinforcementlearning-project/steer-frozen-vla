@@ -1,0 +1,9 @@
+{
+  "rule": "highest score; ties broken in favour of the later checkpoint",
+  "selected_env_step": 7000,
+  "selected_checkpoint": "results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt",
+  "selected_score": 35,
+  "episodes": 40,
+  "final_score": 31,
+  "n_candidates": 19
+}

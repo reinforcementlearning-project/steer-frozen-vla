@@ -1,0 +1,942 @@
+{
+ "libero_object/1": {
+  "task": "pick up the cream cheese and place it in the basket",
+  "n_init": 50,
+  "objects": {
+   "cream_cheese_1": {
+    "xy_std_cm": [
+     0.27,
+     0.3
+    ],
+    "xy_range_cm": [
+     0.98,
+     0.98
+    ],
+    "unique_xy_mm": 38
+   },
+   "basket_1": {
+    "xy_std_cm": [
+     0.83,
+     0.78
+    ],
+    "xy_range_cm": [
+     2.85,
+     2.77
+    ],
+    "unique_xy_mm": 49
+   },
+   "alphabet_soup_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "milk_1": {
+    "xy_std_cm": [
+     0.27,
+     0.3
+    ],
+    "xy_range_cm": [
+     0.95,
+     0.93
+    ],
+    "unique_xy_mm": 40
+   },
+   "tomato_sauce_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "butter_1": {
+    "xy_std_cm": [
+     0.28,
+     0.26
+    ],
+    "xy_range_cm": [
+     0.98,
+     0.96
+    ],
+    "unique_xy_mm": 38
+   },
+   "orange_juice_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "_eef": {
+    "xy_std_cm": [
+     0.56,
+     0.96
+    ],
+    "xy_range_cm": [
+     2.63,
+     3.34
+    ],
+    "unique_xy_mm": 49
+   }
+  }
+ },
+ "libero_object/2": {
+  "task": "pick up the salad dressing and place it in the basket",
+  "n_init": 50,
+  "objects": {
+   "salad_dressing_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "basket_1": {
+    "xy_std_cm": [
+     0.85,
+     0.87
+    ],
+    "xy_range_cm": [
+     2.91,
+     2.94
+    ],
+    "unique_xy_mm": 50
+   },
+   "ketchup_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "alphabet_soup_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "cream_cheese_1": {
+    "xy_std_cm": [
+     0.29,
+     0.29
+    ],
+    "xy_range_cm": [
+     0.96,
+     0.93
+    ],
+    "unique_xy_mm": 39
+   },
+   "milk_1": {
+    "xy_std_cm": [
+     0.3,
+     0.29
+    ],
+    "xy_range_cm": [
+     0.99,
+     0.96
+    ],
+    "unique_xy_mm": 38
+   },
+   "tomato_sauce_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "_eef": {
+    "xy_std_cm": [
+     0.53,
+     0.82
+    ],
+    "xy_range_cm": [
+     2.13,
+     3.83
+    ],
+    "unique_xy_mm": 49
+   }
+  }
+ },
+ "libero_object/3": {
+  "task": "pick up the bbq sauce and place it in the basket",
+  "n_init": 50,
+  "objects": {
+   "bbq_sauce_1": {
+    "xy_std_cm": [
+     0.58,
+     0.57
+    ],
+    "xy_range_cm": [
+     1.94,
+     1.9
+    ],
+    "unique_xy_mm": 47
+   },
+   "basket_1": {
+    "xy_std_cm": [
+     0.96,
+     0.85
+    ],
+    "xy_range_cm": [
+     2.98,
+     2.93
+    ],
+    "unique_xy_mm": 49
+   },
+   "chocolate_pudding_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "ketchup_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "salad_dressing_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "alphabet_soup_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "cream_cheese_1": {
+    "xy_std_cm": [
+     0.31,
+     0.28
+    ],
+    "xy_range_cm": [
+     0.98,
+     0.96
+    ],
+    "unique_xy_mm": 43
+   },
+   "_eef": {
+    "xy_std_cm": [
+     0.48,
+     0.86
+    ],
+    "xy_range_cm": [
+     2.5,
+     3.45
+    ],
+    "unique_xy_mm": 46
+   }
+  }
+ },
+ "libero_object/4": {
+  "task": "pick up the ketchup and place it in the basket",
+  "n_init": 50,
+  "objects": {
+   "ketchup_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "basket_1": {
+    "xy_std_cm": [
+     0.83,
+     0.83
+    ],
+    "xy_range_cm": [
+     2.81,
+     2.76
+    ],
+    "unique_xy_mm": 49
+   },
+   "bbq_sauce_1": {
+    "xy_std_cm": [
+     0.6,
+     0.59
+    ],
+    "xy_range_cm": [
+     1.92,
+     1.99
+    ],
+    "unique_xy_mm": 48
+   },
+   "salad_dressing_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "alphabet_soup_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "cream_cheese_1": {
+    "xy_std_cm": [
+     0.28,
+     0.27
+    ],
+    "xy_range_cm": [
+     0.93,
+     0.93
+    ],
+    "unique_xy_mm": 40
+   },
+   "milk_1": {
+    "xy_std_cm": [
+     0.3,
+     0.28
+    ],
+    "xy_range_cm": [
+     0.99,
+     0.99
+    ],
+    "unique_xy_mm": 39
+   },
+   "_eef": {
+    "xy_std_cm": [
+     0.54,
+     0.8
+    ],
+    "xy_range_cm": [
+     2.46,
+     3.41
+    ],
+    "unique_xy_mm": 48
+   }
+  }
+ },
+ "libero_object/5": {
+  "task": "pick up the tomato sauce and place it in the basket",
+  "n_init": 50,
+  "objects": {
+   "tomato_sauce_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "basket_1": {
+    "xy_std_cm": [
+     0.86,
+     0.87
+    ],
+    "xy_range_cm": [
+     2.81,
+     2.94
+    ],
+    "unique_xy_mm": 48
+   },
+   "milk_1": {
+    "xy_std_cm": [
+     0.29,
+     0.28
+    ],
+    "xy_range_cm": [
+     0.99,
+     0.91
+    ],
+    "unique_xy_mm": 42
+   },
+   "butter_1": {
+    "xy_std_cm": [
+     0.3,
+     0.28
+    ],
+    "xy_range_cm": [
+     0.98,
+     0.93
+    ],
+    "unique_xy_mm": 39
+   },
+   "orange_juice_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "chocolate_pudding_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "bbq_sauce_1": {
+    "xy_std_cm": [
+     0.57,
+     0.53
+    ],
+    "xy_range_cm": [
+     1.94,
+     1.99
+    ],
+    "unique_xy_mm": 49
+   },
+   "_eef": {
+    "xy_std_cm": [
+     0.61,
+     0.74
+    ],
+    "xy_range_cm": [
+     2.91,
+     4.23
+    ],
+    "unique_xy_mm": 50
+   }
+  }
+ },
+ "libero_object/6": {
+  "task": "pick up the butter and place it in the basket",
+  "n_init": 50,
+  "objects": {
+   "butter_1": {
+    "xy_std_cm": [
+     0.26,
+     0.3
+    ],
+    "xy_range_cm": [
+     0.88,
+     0.97
+    ],
+    "unique_xy_mm": 37
+   },
+   "basket_1": {
+    "xy_std_cm": [
+     0.76,
+     0.81
+    ],
+    "xy_range_cm": [
+     2.95,
+     2.7
+    ],
+    "unique_xy_mm": 47
+   },
+   "tomato_sauce_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "orange_juice_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "chocolate_pudding_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "bbq_sauce_1": {
+    "xy_std_cm": [
+     0.48,
+     0.46
+    ],
+    "xy_range_cm": [
+     1.88,
+     1.88
+    ],
+    "unique_xy_mm": 47
+   },
+   "ketchup_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "_eef": {
+    "xy_std_cm": [
+     0.62,
+     0.72
+    ],
+    "xy_range_cm": [
+     3.21,
+     2.98
+    ],
+    "unique_xy_mm": 47
+   }
+  }
+ },
+ "libero_object/7": {
+  "task": "pick up the milk and place it in the basket",
+  "n_init": 50,
+  "objects": {
+   "milk_1": {
+    "xy_std_cm": [
+     0.3,
+     0.25
+    ],
+    "xy_range_cm": [
+     0.98,
+     0.97
+    ],
+    "unique_xy_mm": 42
+   },
+   "basket_1": {
+    "xy_std_cm": [
+     0.94,
+     0.83
+    ],
+    "xy_range_cm": [
+     2.94,
+     2.65
+    ],
+    "unique_xy_mm": 49
+   },
+   "cream_cheese_1": {
+    "xy_std_cm": [
+     0.26,
+     0.27
+    ],
+    "xy_range_cm": [
+     0.97,
+     0.89
+    ],
+    "unique_xy_mm": 38
+   },
+   "tomato_sauce_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "butter_1": {
+    "xy_std_cm": [
+     0.27,
+     0.29
+    ],
+    "xy_range_cm": [
+     0.92,
+     0.95
+    ],
+    "unique_xy_mm": 40
+   },
+   "orange_juice_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "chocolate_pudding_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "_eef": {
+    "xy_std_cm": [
+     0.57,
+     1.05
+    ],
+    "xy_range_cm": [
+     2.61,
+     4.95
+    ],
+    "unique_xy_mm": 49
+   }
+  }
+ },
+ "libero_object/8": {
+  "task": "pick up the chocolate pudding and place it in the basket",
+  "n_init": 50,
+  "objects": {
+   "chocolate_pudding_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "basket_1": {
+    "xy_std_cm": [
+     0.82,
+     0.85
+    ],
+    "xy_range_cm": [
+     2.81,
+     2.94
+    ],
+    "unique_xy_mm": 50
+   },
+   "orange_juice_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "bbq_sauce_1": {
+    "xy_std_cm": [
+     0.61,
+     0.61
+    ],
+    "xy_range_cm": [
+     1.9,
+     1.91
+    ],
+    "unique_xy_mm": 46
+   },
+   "ketchup_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "salad_dressing_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "alphabet_soup_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "_eef": {
+    "xy_std_cm": [
+     0.66,
+     0.94
+    ],
+    "xy_range_cm": [
+     3.24,
+     4.48
+    ],
+    "unique_xy_mm": 49
+   }
+  }
+ },
+ "libero_object/9": {
+  "task": "pick up the orange juice and place it in the basket",
+  "n_init": 50,
+  "objects": {
+   "orange_juice_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "basket_1": {
+    "xy_std_cm": [
+     0.85,
+     0.9
+    ],
+    "xy_range_cm": [
+     2.92,
+     2.93
+    ],
+    "unique_xy_mm": 48
+   },
+   "butter_1": {
+    "xy_std_cm": [
+     0.27,
+     0.33
+    ],
+    "xy_range_cm": [
+     0.98,
+     0.99
+    ],
+    "unique_xy_mm": 41
+   },
+   "chocolate_pudding_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "bbq_sauce_1": {
+    "xy_std_cm": [
+     0.6,
+     0.49
+    ],
+    "xy_range_cm": [
+     1.98,
+     1.86
+    ],
+    "unique_xy_mm": 49
+   },
+   "ketchup_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "salad_dressing_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "_eef": {
+    "xy_std_cm": [
+     0.57,
+     0.97
+    ],
+    "xy_range_cm": [
+     2.64,
+     4.26
+    ],
+    "unique_xy_mm": 50
+   }
+  }
+ },
+ "libero_object/0": {
+  "task": "pick up the alphabet soup and place it in the basket",
+  "n_init": 50,
+  "objects": {
+   "alphabet_soup_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "basket_1": {
+    "xy_std_cm": [
+     0.81,
+     0.87
+    ],
+    "xy_range_cm": [
+     2.95,
+     2.76
+    ],
+    "unique_xy_mm": 49
+   },
+   "salad_dressing_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "cream_cheese_1": {
+    "xy_std_cm": [
+     0.28,
+     0.28
+    ],
+    "xy_range_cm": [
+     0.97,
+     0.98
+    ],
+    "unique_xy_mm": 38
+   },
+   "milk_1": {
+    "xy_std_cm": [
+     0.29,
+     0.31
+    ],
+    "xy_range_cm": [
+     0.98,
+     0.98
+    ],
+    "unique_xy_mm": 41
+   },
+   "tomato_sauce_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "butter_1": {
+    "xy_std_cm": [
+     0.31,
+     0.28
+    ],
+    "xy_range_cm": [
+     0.98,
+     0.94
+    ],
+    "unique_xy_mm": 42
+   },
+   "_eef": {
+    "xy_std_cm": [
+     0.52,
+     0.75
+    ],
+    "xy_range_cm": [
+     2.17,
+     3.52
+    ],
+    "unique_xy_mm": 47
+   }
+  }
+ }
+}

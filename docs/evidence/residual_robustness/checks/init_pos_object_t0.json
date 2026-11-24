@@ -1,0 +1,96 @@
+{
+ "libero_object/0": {
+  "task": "pick up the alphabet soup and place it in the basket",
+  "n_init": 50,
+  "objects": {
+   "alphabet_soup_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "basket_1": {
+    "xy_std_cm": [
+     0.81,
+     0.87
+    ],
+    "xy_range_cm": [
+     2.95,
+     2.76
+    ],
+    "unique_xy_mm": 49
+   },
+   "salad_dressing_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "cream_cheese_1": {
+    "xy_std_cm": [
+     0.28,
+     0.28
+    ],
+    "xy_range_cm": [
+     0.97,
+     0.98
+    ],
+    "unique_xy_mm": 38
+   },
+   "milk_1": {
+    "xy_std_cm": [
+     0.29,
+     0.31
+    ],
+    "xy_range_cm": [
+     0.98,
+     0.98
+    ],
+    "unique_xy_mm": 41
+   },
+   "tomato_sauce_1": {
+    "xy_std_cm": [
+     0.0,
+     0.0
+    ],
+    "xy_range_cm": [
+     0.0,
+     0.0
+    ],
+    "unique_xy_mm": 1
+   },
+   "butter_1": {
+    "xy_std_cm": [
+     0.31,
+     0.28
+    ],
+    "xy_range_cm": [
+     0.98,
+     0.94
+    ],
+    "unique_xy_mm": 42
+   },
+   "_eef": {
+    "xy_std_cm": [
+     0.52,
+     0.75
+    ],
+    "xy_range_cm": [
+     2.17,
+     3.52
+    ],
+    "unique_xy_mm": 47
+   }
+  }
+ }
+}

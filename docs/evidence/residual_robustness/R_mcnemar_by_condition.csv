@@ -1,0 +1,82 @@
+policy,condition,base_rate,policy_rate,delta_pp,gained,lost,mcnemar_exact_p,role
+s42_val,0cm,0.94,0.96,2.0,3,2,1.0,exploratory
+s42_val,+y 2cm,0.68,0.78,10.0,7,2,0.17969,exploratory
+s42_val,-y 2cm,0.82,0.86,4.0,4,2,0.6875,exploratory
+s42_val,+x 2cm,0.82,0.82,0.0,4,4,1.0,exploratory
+s42_val,-x 2cm,0.92,0.96,4.0,3,1,0.625,exploratory
+s42_val,+y 4cm,0.24,0.44,20.0,12,2,0.01294,exploratory
+s42_val,-y 4cm,0.68,0.72,4.0,6,4,0.75391,exploratory
+s42_val,+x 4cm,0.3,0.36,6.0,6,3,0.50781,exploratory
+s42_val,-x 4cm,0.66,0.74,8.0,5,1,0.21875,exploratory
+s42_final,0cm,0.94,0.94,0.0,3,3,1.0,exploratory
+s42_final,+y 2cm,0.68,0.84,16.0,9,1,0.02148,exploratory
+s42_final,-y 2cm,0.82,0.8,-2.0,4,5,1.0,exploratory
+s42_final,+x 2cm,0.82,0.78,-4.0,4,6,0.75391,exploratory
+s42_final,-x 2cm,0.92,0.86,-6.0,2,5,0.45312,exploratory
+s42_final,+y 4cm,0.24,0.42,18.0,11,2,0.02246,exploratory
+s42_final,-y 4cm,0.68,0.62,-6.0,5,8,0.58105,exploratory
+s42_final,+x 4cm,0.3,0.42,12.0,8,2,0.10938,exploratory
+s42_final,-x 4cm,0.66,0.7,4.0,5,3,0.72656,exploratory
+s43_val,0cm,0.94,0.94,0.0,3,3,1.0,exploratory
+s43_val,+y 2cm,0.68,0.74,6.0,5,2,0.45312,exploratory
+s43_val,-y 2cm,0.82,0.88,6.0,4,1,0.375,exploratory
+s43_val,+x 2cm,0.82,0.84,2.0,4,3,1.0,exploratory
+s43_val,-x 2cm,0.92,0.9,-2.0,2,3,1.0,exploratory
+s43_val,+y 4cm,0.24,0.36,12.0,10,4,0.17957,exploratory
+s43_val,-y 4cm,0.68,0.72,4.0,6,4,0.75391,exploratory
+s43_val,+x 4cm,0.3,0.38,8.0,7,3,0.34375,exploratory
+s43_val,-x 4cm,0.66,0.66,0.0,5,5,1.0,exploratory
+s43_final,0cm,0.94,0.92,-2.0,2,3,1.0,exploratory
+s43_final,+y 2cm,0.68,0.64,-4.0,2,4,0.6875,exploratory
+s43_final,-y 2cm,0.82,0.78,-4.0,4,6,0.75391,exploratory
+s43_final,+x 2cm,0.82,0.76,-6.0,4,7,0.54883,exploratory
+s43_final,-x 2cm,0.92,0.88,-4.0,0,2,0.5,exploratory
+s43_final,+y 4cm,0.24,0.36,12.0,8,2,0.10938,exploratory
+s43_final,-y 4cm,0.68,0.56,-12.0,3,9,0.146,exploratory
+s43_final,+x 4cm,0.3,0.34,4.0,5,3,0.72656,exploratory
+s43_final,-x 4cm,0.66,0.66,0.0,6,6,1.0,exploratory
+s44_val,0cm,0.94,0.94,0.0,1,1,1.0,exploratory
+s44_val,+y 2cm,0.68,0.76,8.0,5,1,0.21875,exploratory
+s44_val,-y 2cm,0.82,0.86,4.0,5,3,0.72656,exploratory
+s44_val,+x 2cm,0.82,0.82,0.0,3,3,1.0,exploratory
+s44_val,-x 2cm,0.92,0.92,0.0,2,2,1.0,exploratory
+s44_val,+y 4cm,0.24,0.38,14.0,9,2,0.06543,exploratory
+s44_val,-y 4cm,0.68,0.68,0.0,4,4,1.0,exploratory
+s44_val,+x 4cm,0.3,0.32,2.0,5,4,1.0,exploratory
+s44_val,-x 4cm,0.66,0.7,4.0,6,4,0.75391,exploratory
+s44_final,0cm,0.94,0.9,-4.0,3,5,0.72656,exploratory
+s44_final,+y 2cm,0.68,0.72,4.0,5,3,0.72656,exploratory
+s44_final,-y 2cm,0.82,0.76,-6.0,4,7,0.54883,exploratory
+s44_final,+x 2cm,0.82,0.8,-2.0,3,4,1.0,exploratory
+s44_final,-x 2cm,0.92,0.84,-8.0,1,5,0.21875,exploratory
+s44_final,+y 4cm,0.24,0.3,6.0,7,4,0.54883,exploratory
+s44_final,-y 4cm,0.68,0.68,0.0,4,4,1.0,exploratory
+s44_final,+x 4cm,0.3,0.4,10.0,8,3,0.22656,exploratory
+s44_final,-x 4cm,0.66,0.62,-4.0,8,10,0.81453,exploratory
+s42_val_postoff,+y 2cm,0.68,0.72,4.0,4,2,0.6875,exploratory
+s42_val_postoff,-y 2cm,0.82,0.86,4.0,6,4,0.75391,exploratory
+s42_val_postoff,+x 2cm,0.82,0.84,2.0,4,3,1.0,exploratory
+s42_val_postoff,-x 2cm,0.92,0.92,0.0,2,2,1.0,exploratory
+s42_val_postoff,+y 4cm,0.24,0.48,24.0,15,3,0.00754,exploratory
+s42_val_postoff,-y 4cm,0.68,0.64,-4.0,3,5,0.72656,exploratory
+s42_val_postoff,+x 4cm,0.3,0.38,8.0,6,2,0.28906,exploratory
+s42_val_postoff,-x 4cm,0.66,0.7,4.0,6,4,0.75391,exploratory
+s43_val_postoff,+y 2cm,0.68,0.74,6.0,5,2,0.45312,exploratory
+s43_val_postoff,-y 2cm,0.82,0.9,8.0,5,1,0.21875,exploratory
+s43_val_postoff,+x 2cm,0.82,0.8,-2.0,4,5,1.0,exploratory
+s43_val_postoff,-x 2cm,0.92,0.9,-2.0,2,3,1.0,exploratory
+s43_val_postoff,+y 4cm,0.24,0.44,20.0,12,2,0.01294,exploratory
+s43_val_postoff,-y 4cm,0.68,0.64,-4.0,2,4,0.6875,exploratory
+s43_val_postoff,+x 4cm,0.3,0.38,8.0,5,1,0.21875,exploratory
+s43_val_postoff,-x 4cm,0.66,0.7,4.0,5,3,0.72656,exploratory
+s44_val_postoff,+y 2cm,0.68,0.7,2.0,3,2,1.0,exploratory
+s44_val_postoff,-y 2cm,0.82,0.86,4.0,5,3,0.72656,exploratory
+s44_val_postoff,+x 2cm,0.82,0.74,-8.0,2,6,0.28906,exploratory
+s44_val_postoff,-x 2cm,0.92,0.9,-2.0,2,3,1.0,exploratory
+s44_val_postoff,+y 4cm,0.24,0.3,6.0,6,3,0.50781,exploratory
+s44_val_postoff,-y 4cm,0.68,0.64,-4.0,2,4,0.6875,exploratory
+s44_val_postoff,+x 4cm,0.3,0.24,-6.0,4,7,0.54883,exploratory
+s44_val_postoff,-x 4cm,0.66,0.68,2.0,4,3,1.0,exploratory
+s42_final_scale0,0cm,0.94,0.94,0.0,0,0,1.0,exploratory
+s42_final_scale0,+y 2cm,0.68,0.68,0.0,0,0,1.0,exploratory
+s42_final_scale0,-x 4cm,0.66,0.66,0.0,0,0,1.0,exploratory

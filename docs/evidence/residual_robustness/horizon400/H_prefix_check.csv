@@ -1,0 +1,9 @@
+policy,condition,episodes,max_steps_280,max_steps_400,same_checkpoint_sha256,same_initial_state_and_seed,same_trigger_step,same_outcome_up_to_280,steps_compared,max_abs_diff_exec_action,max_abs_diff_residual
+base,+y 4cm,50,280,400,True,50,50,50,12866,0.0,0.0
+s42_val,+y 4cm,50,280,400,True,50,50,50,12369,0.0,0.0
+s43_val,+y 4cm,50,280,400,True,50,50,50,12639,0.0,0.0
+s44_val,+y 4cm,50,280,400,True,50,50,50,12615,0.0,0.0
+base,-y 4cm,50,280,400,True,50,50,50,11528,0.0,0.0
+s42_val,-y 4cm,50,280,400,True,50,50,50,11434,0.0,0.0
+s43_val,-y 4cm,50,280,400,True,50,50,50,11589,0.0,0.0
+s44_val,-y 4cm,50,280,400,True,50,50,50,11623,0.0,0.0

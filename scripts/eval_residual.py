@@ -31,6 +31,10 @@ def main():
                    help="frozen-base control: residual = 0 (same code path as smoke_rollout.py)")
     p.add_argument("--axis", type=int, default=1, help="perturbation axis (0=x, 1=y); default matches training")
     p.add_argument("--direction", type=int, default=1, help="perturbation sign (+1/-1); default matches training")
+    p.add_argument("--scale-override", type=float, default=None,
+                   help="sanity check: run the trained actor but execute residual scale VALUE (e.g. 0) instead of --alpha")
+    p.add_argument("--residual-off-after-perturb", action="store_true",
+                   help="ablation: residual = 0 from the first step after the perturbation is applied")
     p.add_argument("--save-steps", action="store_true",
                    help="also write <out>.steps.npz with per-step obs/residual/base/executed actions")
     p.add_argument("--suite", default="libero_object")
@@ -72,7 +76,8 @@ def main():
         sim_env = DynamicLibero(sim_env, PerturbationConfig(args.target, args.distance_cm / 100,
                                                             axis=args.axis, direction=args.direction))
     residual_dims = int(state["agent"]["action_spec"]["dim"]) if state is not None else 7
-    env = ResidualEnv(sim_env, base, args.alpha, max_steps=args.max_steps, residual_dims=residual_dims)
+    exec_scale = args.alpha if args.scale_override is None else args.scale_override
+    env = ResidualEnv(sim_env, base, exec_scale, max_steps=args.max_steps, residual_dims=residual_dims)
     agent = None
     if state is not None:
         agent = SACAgent(env.obs_dim, env.action_spec, SACConfig(device="cuda"))
@@ -84,6 +89,8 @@ def main():
               "checkpoint_sha256": hashlib.sha256(ckpt_path.read_bytes()).hexdigest() if ckpt_path else None,
               "checkpoint_trainer": {k: v for k, v in state["trainer"].items() if k != "config"} if state else None,
               "deterministic": not args.stochastic, "residual_dims": residual_dims,
+              "executed_residual_scale": exec_scale,
+              "residual_off_after_perturb": args.residual_off_after_perturb,
               "checkpoint_n_action_steps": base.checkpoint_n_action_steps,
               "n_action_steps": base.config.n_action_steps, "chunk_size": base.config.chunk_size,
               "normalization": str(base.config.normalization_mapping),
@@ -98,13 +105,15 @@ def main():
             initial_state_hash = hashlib.sha256(initial_state.tobytes()).hexdigest()
             initial_state_id = sim_env.init_state_id - 1
             ret, calls, norms = 0., info["vla_calls"], []
+            perturbed = False
             for step in range(args.max_steps):
-                if agent is None:
+                if agent is None or (args.residual_off_after_perturb and perturbed):
                     residual = np.zeros(residual_dims, dtype=np.float32)
                 else:
                     with torch.no_grad():
                         residual = agent.act(obs, deterministic=not args.stochastic)
                 next_obs, reward, terminated, truncated, info = env.step(residual)
+                perturbed = perturbed or any(e["applied"] for e in info.get("perturb_events", []))
                 if args.save_steps:
                     for k, v in (("episode", episode), ("step", step), ("obs", obs), ("u", np.pad(residual, (0, 7 - residual_dims))),
                                  ("base_action", info["base_action"]), ("exec_action", info["exec_action"])):

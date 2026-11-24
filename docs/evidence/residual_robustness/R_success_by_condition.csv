@@ -1,0 +1,91 @@
+policy,condition,episodes,successes,success_rate,wilson95_lo,wilson95_hi,checkpoint
+base,0cm,50,47,0.94,0.8378,0.9794,frozen_base_zero_residual
+base,+y 2cm,50,34,0.68,0.5419,0.7924,frozen_base_zero_residual
+base,-y 2cm,50,41,0.82,0.692,0.9023,frozen_base_zero_residual
+base,+x 2cm,50,41,0.82,0.692,0.9023,frozen_base_zero_residual
+base,-x 2cm,50,46,0.92,0.8116,0.9685,frozen_base_zero_residual
+base,+y 4cm,50,12,0.24,0.143,0.3741,frozen_base_zero_residual
+base,-y 4cm,50,34,0.68,0.5419,0.7924,frozen_base_zero_residual
+base,+x 4cm,50,15,0.3,0.191,0.4375,frozen_base_zero_residual
+base,-x 4cm,50,33,0.66,0.5215,0.7756,frozen_base_zero_residual
+s42_val,0cm,50,48,0.96,0.8654,0.989,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt
+s42_val,+y 2cm,50,39,0.78,0.6476,0.8725,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt
+s42_val,-y 2cm,50,43,0.86,0.7381,0.9305,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt
+s42_val,+x 2cm,50,41,0.82,0.692,0.9023,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt
+s42_val,-x 2cm,50,48,0.96,0.8654,0.989,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt
+s42_val,+y 4cm,50,22,0.44,0.3116,0.5769,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt
+s42_val,-y 4cm,50,36,0.72,0.5833,0.8253,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt
+s42_val,+x 4cm,50,18,0.36,0.2414,0.4986,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt
+s42_val,-x 4cm,50,37,0.74,0.6045,0.8413,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt
+s42_final,0cm,50,47,0.94,0.8378,0.9794,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00020000.pt
+s42_final,+y 2cm,50,42,0.84,0.7149,0.9166,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00020000.pt
+s42_final,-y 2cm,50,40,0.8,0.6696,0.8876,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00020000.pt
+s42_final,+x 2cm,50,39,0.78,0.6476,0.8725,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00020000.pt
+s42_final,-x 2cm,50,43,0.86,0.7381,0.9305,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00020000.pt
+s42_final,+y 4cm,50,21,0.42,0.2938,0.5577,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00020000.pt
+s42_final,-y 4cm,50,31,0.62,0.4815,0.7414,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00020000.pt
+s42_final,+x 4cm,50,21,0.42,0.2938,0.5577,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00020000.pt
+s42_final,-x 4cm,50,35,0.7,0.5625,0.809,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00020000.pt
+s43_val,0cm,50,47,0.94,0.8378,0.9794,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt
+s43_val,+y 2cm,50,37,0.74,0.6045,0.8413,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt
+s43_val,-y 2cm,50,44,0.88,0.762,0.9438,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt
+s43_val,+x 2cm,50,42,0.84,0.7149,0.9166,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt
+s43_val,-x 2cm,50,45,0.9,0.7864,0.9565,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt
+s43_val,+y 4cm,50,18,0.36,0.2414,0.4986,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt
+s43_val,-y 4cm,50,36,0.72,0.5833,0.8253,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt
+s43_val,+x 4cm,50,19,0.38,0.2586,0.5185,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt
+s43_val,-x 4cm,50,33,0.66,0.5215,0.7756,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt
+s43_final,0cm,50,46,0.92,0.8116,0.9685,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00020000.pt
+s43_final,+y 2cm,50,32,0.64,0.5014,0.7586,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00020000.pt
+s43_final,-y 2cm,50,39,0.78,0.6476,0.8725,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00020000.pt
+s43_final,+x 2cm,50,38,0.76,0.6259,0.857,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00020000.pt
+s43_final,-x 2cm,50,44,0.88,0.762,0.9438,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00020000.pt
+s43_final,+y 4cm,50,18,0.36,0.2414,0.4986,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00020000.pt
+s43_final,-y 4cm,50,28,0.56,0.4231,0.6884,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00020000.pt
+s43_final,+x 4cm,50,17,0.34,0.2244,0.4785,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00020000.pt
+s43_final,-x 4cm,50,33,0.66,0.5215,0.7756,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00020000.pt
+s44_val,0cm,50,47,0.94,0.8378,0.9794,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt
+s44_val,+y 2cm,50,38,0.76,0.6259,0.857,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt
+s44_val,-y 2cm,50,43,0.86,0.7381,0.9305,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt
+s44_val,+x 2cm,50,41,0.82,0.692,0.9023,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt
+s44_val,-x 2cm,50,46,0.92,0.8116,0.9685,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt
+s44_val,+y 4cm,50,19,0.38,0.2586,0.5185,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt
+s44_val,-y 4cm,50,34,0.68,0.5419,0.7924,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt
+s44_val,+x 4cm,50,16,0.32,0.2076,0.4581,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt
+s44_val,-x 4cm,50,35,0.7,0.5625,0.809,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt
+s44_final,0cm,50,45,0.9,0.7864,0.9565,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00020000.pt
+s44_final,+y 2cm,50,36,0.72,0.5833,0.8253,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00020000.pt
+s44_final,-y 2cm,50,38,0.76,0.6259,0.857,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00020000.pt
+s44_final,+x 2cm,50,40,0.8,0.6696,0.8876,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00020000.pt
+s44_final,-x 2cm,50,42,0.84,0.7149,0.9166,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00020000.pt
+s44_final,+y 4cm,50,15,0.3,0.191,0.4375,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00020000.pt
+s44_final,-y 4cm,50,34,0.68,0.5419,0.7924,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00020000.pt
+s44_final,+x 4cm,50,20,0.4,0.2761,0.5382,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00020000.pt
+s44_final,-x 4cm,50,31,0.62,0.4815,0.7414,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00020000.pt
+s42_val_postoff,+y 2cm,50,36,0.72,0.5833,0.8253,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt
+s42_val_postoff,-y 2cm,50,43,0.86,0.7381,0.9305,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt
+s42_val_postoff,+x 2cm,50,42,0.84,0.7149,0.9166,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt
+s42_val_postoff,-x 2cm,50,46,0.92,0.8116,0.9685,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt
+s42_val_postoff,+y 4cm,50,24,0.48,0.348,0.6149,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt
+s42_val_postoff,-y 4cm,50,32,0.64,0.5014,0.7586,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt
+s42_val_postoff,+x 4cm,50,19,0.38,0.2586,0.5185,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt
+s42_val_postoff,-x 4cm,50,35,0.7,0.5625,0.809,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt
+s43_val_postoff,+y 2cm,50,37,0.74,0.6045,0.8413,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt
+s43_val_postoff,-y 2cm,50,45,0.9,0.7864,0.9565,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt
+s43_val_postoff,+x 2cm,50,40,0.8,0.6696,0.8876,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt
+s43_val_postoff,-x 2cm,50,45,0.9,0.7864,0.9565,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt
+s43_val_postoff,+y 4cm,50,22,0.44,0.3116,0.5769,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt
+s43_val_postoff,-y 4cm,50,32,0.64,0.5014,0.7586,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt
+s43_val_postoff,+x 4cm,50,19,0.38,0.2586,0.5185,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt
+s43_val_postoff,-x 4cm,50,35,0.7,0.5625,0.809,results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt
+s44_val_postoff,+y 2cm,50,35,0.7,0.5625,0.809,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt
+s44_val_postoff,-y 2cm,50,43,0.86,0.7381,0.9305,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt
+s44_val_postoff,+x 2cm,50,37,0.74,0.6045,0.8413,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt
+s44_val_postoff,-x 2cm,50,45,0.9,0.7864,0.9565,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt
+s44_val_postoff,+y 4cm,50,15,0.3,0.191,0.4375,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt
+s44_val_postoff,-y 4cm,50,32,0.64,0.5014,0.7586,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt
+s44_val_postoff,+x 4cm,50,12,0.24,0.143,0.3741,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt
+s44_val_postoff,-x 4cm,50,34,0.68,0.5419,0.7924,results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt
+s42_final_scale0,0cm,50,47,0.94,0.8378,0.9794,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00020000.pt
+s42_final_scale0,+y 2cm,50,34,0.68,0.5419,0.7924,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00020000.pt
+s42_final_scale0,-x 4cm,50,33,0.66,0.5215,0.7756,results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00020000.pt

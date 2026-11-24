@@ -1,0 +1,19 @@
+seed,policy,checkpoint_kind,metric,conditions,base_rate,policy_rate,diff,boot95_lo,boot95_hi,signflip_p,role,holm_p
+42,s42_val,val,M1,0cm,0.94,0.96,0.02,-0.06,0.1,1.0,primary,1.0
+42,s42_val,val,M2,+y 2cm/-y 2cm/+x 2cm/-x 2cm,0.81,0.855,0.045,0.0,0.095,0.1078,primary,0.86244
+42,s42_val,val,M3,+y 4cm/-y 4cm/+x 4cm/-x 4cm,0.47,0.565,0.095,0.04,0.15,0.0019,primary,0.01714
+42,s42_final,final,M1,0cm,0.94,0.94,0.0,-0.1,0.1,1.0,exploratory,
+42,s42_final,final,M2,+y 2cm/-y 2cm/+x 2cm/-x 2cm,0.81,0.82,0.01,-0.04,0.06,0.84617,exploratory,
+42,s42_final,final,M3,+y 4cm/-y 4cm/+x 4cm/-x 4cm,0.47,0.54,0.07,0.005,0.14,0.06396,exploratory,
+43,s43_val,val,M1,0cm,0.94,0.94,0.0,-0.1,0.1,1.0,primary,1.0
+43,s43_val,val,M2,+y 2cm/-y 2cm/+x 2cm/-x 2cm,0.81,0.84,0.03,-0.02,0.075,0.31032,primary,1.0
+43,s43_val,val,M3,+y 4cm/-y 4cm/+x 4cm/-x 4cm,0.47,0.53,0.06,-0.01,0.13,0.14202,primary,0.99414
+43,s43_final,final,M1,0cm,0.94,0.92,-0.02,-0.1,0.06,1.0,exploratory,
+43,s43_final,final,M2,+y 2cm/-y 2cm/+x 2cm/-x 2cm,0.81,0.765,-0.045,-0.1,0.01,0.14961,exploratory,
+43,s43_final,final,M3,+y 4cm/-y 4cm/+x 4cm/-x 4cm,0.47,0.48,0.01,-0.05,0.075,0.87647,exploratory,
+44,s44_val,val,M1,0cm,0.94,0.94,0.0,-0.06,0.06,1.0,primary,1.0
+44,s44_val,val,M2,+y 2cm/-y 2cm/+x 2cm/-x 2cm,0.81,0.84,0.03,-0.02,0.075,0.3409,primary,1.0
+44,s44_val,val,M3,+y 4cm/-y 4cm/+x 4cm/-x 4cm,0.47,0.52,0.05,-0.015,0.1151,0.20477,primary,1.0
+44,s44_final,final,M1,0cm,0.94,0.9,-0.04,-0.16,0.06,0.72867,exploratory,
+44,s44_final,final,M2,+y 2cm/-y 2cm/+x 2cm/-x 2cm,0.81,0.78,-0.03,-0.085,0.02,0.37112,exploratory,
+44,s44_final,final,M3,+y 4cm/-y 4cm/+x 4cm/-x 4cm,0.47,0.5,0.03,-0.045,0.105,0.52264,exploratory,

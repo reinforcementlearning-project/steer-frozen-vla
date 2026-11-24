@@ -1,0 +1,4 @@
+check,condition,episodes,identical_success_and_length_vs_base,policy_successes,base_successes
+"alpha=0 wrapper, actor running (seed 42 final)",0cm,50,50,47,47
+"alpha=0 wrapper, actor running (seed 42 final)",+y 2cm,50,50,34,34
+"alpha=0 wrapper, actor running (seed 42 final)",-x 4cm,50,50,33,33
