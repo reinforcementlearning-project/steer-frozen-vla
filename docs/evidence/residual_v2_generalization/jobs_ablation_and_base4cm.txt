@@ -1,0 +1,14 @@
+s42_val_middle_py2_postoff --checkpoint /home/sylee/rf/steer-frozen-vla/results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt --residual-off-after-perturb --v2-set timing_middle --v2-condition=+y2
+s42_val_late_py2_postoff --checkpoint /home/sylee/rf/steer-frozen-vla/results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt --residual-off-after-perturb --v2-set timing_late --v2-condition=+y2
+s43_val_middle_py2_postoff --checkpoint /home/sylee/rf/steer-frozen-vla/results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt --residual-off-after-perturb --v2-set timing_middle --v2-condition=+y2
+s43_val_late_py2_postoff --checkpoint /home/sylee/rf/steer-frozen-vla/results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt --residual-off-after-perturb --v2-set timing_late --v2-condition=+y2
+s44_val_middle_py2_postoff --checkpoint /home/sylee/rf/steer-frozen-vla/results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt --residual-off-after-perturb --v2-set timing_middle --v2-condition=+y2
+s44_val_late_py2_postoff --checkpoint /home/sylee/rf/steer-frozen-vla/results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt --residual-off-after-perturb --v2-set timing_late --v2-condition=+y2
+base_middle_py4 --zero-residual --v2-set timing_middle --v2-condition=+y4
+base_middle_my4 --zero-residual --v2-set timing_middle --v2-condition=-y4
+base_middle_px4 --zero-residual --v2-set timing_middle --v2-condition=+x4
+base_middle_mx4 --zero-residual --v2-set timing_middle --v2-condition=-x4
+base_late_py4 --zero-residual --v2-set timing_late --v2-condition=+y4
+base_late_my4 --zero-residual --v2-set timing_late --v2-condition=-y4
+base_late_px4 --zero-residual --v2-set timing_late --v2-condition=+x4
+base_late_mx4 --zero-residual --v2-set timing_late --v2-condition=-x4

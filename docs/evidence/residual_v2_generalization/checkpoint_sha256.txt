@@ -1,0 +1,3 @@
+a2d1bcd2df48e92d465d98c6fbf3ebd9bffcc0d20046da8b0855a97edf89eb85  /home/sylee/rf/steer-frozen-vla/results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt
+003a21f6f3862424afb45419ba9ed04351bc56043510a4b9ce1a4b5fe1b3c966  /home/sylee/rf/steer-frozen-vla/results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt
+5183fbd1b89cebe64cbe210076109abd1d4d5faf6244f17eb9954141663e8f5c  /home/sylee/rf/steer-frozen-vla/results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt

@@ -1,0 +1,418 @@
+[
+ {
+  "run": "base_late_mx2",
+  "config": "timing_late/-x2",
+  "split": "eval_secondary",
+  "window_m": [
+   0.05,
+   0.1
+  ],
+  "max_steps": 280,
+  "residual_dims": 7,
+  "executed_scale": 0.1,
+  "n_action_steps": 10,
+  "checkpoint_sha256": null,
+  "episodes": 5,
+  "status": [
+   "applied",
+   "applied",
+   "applied",
+   "applied",
+   "applied"
+  ],
+  "trigger_step": [
+   37,
+   43,
+   41,
+   42,
+   41
+  ],
+  "eef_distance": [
+   0.0977,
+   0.0923,
+   0.0975,
+   0.0959,
+   0.0997
+  ],
+  "dynamic_libero_keys_ok": true,
+  "u_dim7_all_zero": true,
+  "u_dims_1_6_nonzero_frac": 0.0,
+  "u_abs_max": 0.0,
+  "success": [
+   true,
+   true,
+   false,
+   false,
+   true
+  ]
+ },
+ {
+  "run": "base_legacy_py2",
+  "config": "primary/+y2",
+  "split": "eval_primary",
+  "window_m": [
+   0.05,
+   0.18
+  ],
+  "max_steps": 280,
+  "residual_dims": 7,
+  "executed_scale": 0.1,
+  "n_action_steps": 10,
+  "checkpoint_sha256": null,
+  "episodes": 5,
+  "status": [
+   "applied",
+   "applied",
+   "applied",
+   "applied",
+   "applied"
+  ],
+  "trigger_step": [
+   28,
+   35,
+   33,
+   34,
+   33
+  ],
+  "eef_distance": [
+   0.179,
+   0.1739,
+   0.1787,
+   0.178,
+   0.1756
+  ],
+  "dynamic_libero_keys_ok": true,
+  "u_dim7_all_zero": true,
+  "u_dims_1_6_nonzero_frac": 0.0,
+  "u_abs_max": 0.0,
+  "success": [
+   true,
+   false,
+   false,
+   true,
+   true
+  ],
+  "v1_reproduction": {
+   "reference": "/home/sylee/rf/steer-frozen-vla/results/residual_robustness/evals/base_py2.json",
+   "success": "5/5",
+   "env_steps": "5/5",
+   "initial_state_hash": "5/5",
+   "event": "5/5",
+   "steps_compared": 1009,
+   "max_abs_diff_exec_action": 0.0,
+   "max_abs_diff_residual": 0.0
+  }
+ },
+ {
+  "run": "base_middle_py2",
+  "config": "timing_middle/+y2",
+  "split": "eval_secondary",
+  "window_m": [
+   0.1,
+   0.15
+  ],
+  "max_steps": 280,
+  "residual_dims": 7,
+  "executed_scale": 0.1,
+  "n_action_steps": 10,
+  "checkpoint_sha256": null,
+  "episodes": 5,
+  "status": [
+   "applied",
+   "applied",
+   "applied",
+   "applied",
+   "applied"
+  ],
+  "trigger_step": [
+   32,
+   38,
+   37,
+   37,
+   36
+  ],
+  "eef_distance": [
+   0.15,
+   0.1445,
+   0.1424,
+   0.149,
+   0.1492
+  ],
+  "dynamic_libero_keys_ok": true,
+  "u_dim7_all_zero": true,
+  "u_dims_1_6_nonzero_frac": 0.0,
+  "u_abs_max": 0.0,
+  "success": [
+   true,
+   false,
+   false,
+   true,
+   true
+  ]
+ },
+ {
+  "run": "s42_val_late_mx2",
+  "config": "timing_late/-x2",
+  "split": "eval_secondary",
+  "window_m": [
+   0.05,
+   0.1
+  ],
+  "max_steps": 280,
+  "residual_dims": 6,
+  "executed_scale": 0.1,
+  "n_action_steps": 10,
+  "checkpoint_sha256": "a2d1bcd2df48e92d465d98c6fbf3ebd9bffcc0d20046da8b0855a97edf89eb85",
+  "episodes": 5,
+  "status": [
+   "applied",
+   "applied",
+   "applied",
+   "applied",
+   "applied"
+  ],
+  "trigger_step": [
+   37,
+   43,
+   41,
+   42,
+   41
+  ],
+  "eef_distance": [
+   0.0961,
+   0.092,
+   0.0978,
+   0.0946,
+   0.0996
+  ],
+  "dynamic_libero_keys_ok": true,
+  "u_dim7_all_zero": true,
+  "u_dims_1_6_nonzero_frac": 1.0,
+  "u_abs_max": 0.6530008316040039,
+  "success": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ {
+  "run": "s42_val_legacy_py2",
+  "config": "primary/+y2",
+  "split": "eval_primary",
+  "window_m": [
+   0.05,
+   0.18
+  ],
+  "max_steps": 280,
+  "residual_dims": 6,
+  "executed_scale": 0.1,
+  "n_action_steps": 10,
+  "checkpoint_sha256": "a2d1bcd2df48e92d465d98c6fbf3ebd9bffcc0d20046da8b0855a97edf89eb85",
+  "episodes": 5,
+  "status": [
+   "applied",
+   "applied",
+   "applied",
+   "applied",
+   "applied"
+  ],
+  "trigger_step": [
+   28,
+   35,
+   33,
+   34,
+   33
+  ],
+  "eef_distance": [
+   0.1782,
+   0.1734,
+   0.1787,
+   0.1769,
+   0.1754
+  ],
+  "dynamic_libero_keys_ok": true,
+  "u_dim7_all_zero": true,
+  "u_dims_1_6_nonzero_frac": 1.0,
+  "u_abs_max": 0.6307054758071899,
+  "success": [
+   true,
+   true,
+   false,
+   true,
+   true
+  ],
+  "v1_reproduction": {
+   "reference": "/home/sylee/rf/steer-frozen-vla/results/residual_robustness/evals/s42_val_py2.json",
+   "success": "5/5",
+   "env_steps": "5/5",
+   "initial_state_hash": "5/5",
+   "event": "5/5",
+   "steps_compared": 1051,
+   "max_abs_diff_exec_action": 0.0,
+   "max_abs_diff_residual": 0.0
+  }
+ },
+ {
+  "run": "s42_val_middle_py2",
+  "config": "timing_middle/+y2",
+  "split": "eval_secondary",
+  "window_m": [
+   0.1,
+   0.15
+  ],
+  "max_steps": 280,
+  "residual_dims": 6,
+  "executed_scale": 0.1,
+  "n_action_steps": 10,
+  "checkpoint_sha256": "a2d1bcd2df48e92d465d98c6fbf3ebd9bffcc0d20046da8b0855a97edf89eb85",
+  "episodes": 5,
+  "status": [
+   "applied",
+   "applied",
+   "applied",
+   "applied",
+   "applied"
+  ],
+  "trigger_step": [
+   32,
+   38,
+   37,
+   37,
+   36
+  ],
+  "eef_distance": [
+   0.1486,
+   0.1441,
+   0.1427,
+   0.1478,
+   0.1489
+  ],
+  "dynamic_libero_keys_ok": true,
+  "u_dim7_all_zero": true,
+  "u_dims_1_6_nonzero_frac": 1.0,
+  "u_abs_max": 0.6832249164581299,
+  "success": [
+   true,
+   false,
+   false,
+   true,
+   true
+  ]
+ },
+ {
+  "run": "s43_val_legacy_py2",
+  "config": "primary/+y2",
+  "split": "eval_primary",
+  "window_m": [
+   0.05,
+   0.18
+  ],
+  "max_steps": 280,
+  "residual_dims": 6,
+  "executed_scale": 0.1,
+  "n_action_steps": 10,
+  "checkpoint_sha256": "003a21f6f3862424afb45419ba9ed04351bc56043510a4b9ce1a4b5fe1b3c966",
+  "episodes": 5,
+  "status": [
+   "applied",
+   "applied",
+   "applied",
+   "applied",
+   "applied"
+  ],
+  "trigger_step": [
+   28,
+   34,
+   33,
+   34,
+   33
+  ],
+  "eef_distance": [
+   0.1766,
+   0.1773,
+   0.1742,
+   0.1747,
+   0.174
+  ],
+  "dynamic_libero_keys_ok": true,
+  "u_dim7_all_zero": true,
+  "u_dims_1_6_nonzero_frac": 1.0,
+  "u_abs_max": 0.322547972202301,
+  "success": [
+   true,
+   true,
+   false,
+   true,
+   true
+  ],
+  "v1_reproduction": {
+   "reference": "/home/sylee/rf/steer-frozen-vla/results/residual_robustness/evals/s43_val_py2.json",
+   "success": "5/5",
+   "env_steps": "5/5",
+   "initial_state_hash": "5/5",
+   "event": "5/5",
+   "steps_compared": 868,
+   "max_abs_diff_exec_action": 0.0,
+   "max_abs_diff_residual": 0.0
+  }
+ },
+ {
+  "run": "s44_val_legacy_py2",
+  "config": "primary/+y2",
+  "split": "eval_primary",
+  "window_m": [
+   0.05,
+   0.18
+  ],
+  "max_steps": 280,
+  "residual_dims": 6,
+  "executed_scale": 0.1,
+  "n_action_steps": 10,
+  "checkpoint_sha256": "5183fbd1b89cebe64cbe210076109abd1d4d5faf6244f17eb9954141663e8f5c",
+  "episodes": 5,
+  "status": [
+   "applied",
+   "applied",
+   "applied",
+   "applied",
+   "applied"
+  ],
+  "trigger_step": [
+   28,
+   35,
+   33,
+   34,
+   33
+  ],
+  "eef_distance": [
+   0.1782,
+   0.1728,
+   0.1783,
+   0.1777,
+   0.176
+  ],
+  "dynamic_libero_keys_ok": true,
+  "u_dim7_all_zero": true,
+  "u_dims_1_6_nonzero_frac": 1.0,
+  "u_abs_max": 0.5515402555465698,
+  "success": [
+   true,
+   false,
+   false,
+   true,
+   true
+  ],
+  "v1_reproduction": {
+   "reference": "/home/sylee/rf/steer-frozen-vla/results/residual_robustness/evals/s44_val_py2.json",
+   "success": "5/5",
+   "env_steps": "5/5",
+   "initial_state_hash": "5/5",
+   "event": "5/5",
+   "steps_compared": 1046,
+   "max_abs_diff_exec_action": 0.0,
+   "max_abs_diff_residual": 0.0
+  }
+ }
+]

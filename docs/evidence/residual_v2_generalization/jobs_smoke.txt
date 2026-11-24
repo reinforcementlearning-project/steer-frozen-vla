@@ -1,0 +1,8 @@
+base_legacy_py2 --zero-residual --v2-set primary --v2-condition=+y2
+s42_val_legacy_py2 --checkpoint /home/sylee/rf/steer-frozen-vla/results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt --v2-set primary --v2-condition=+y2
+s43_val_legacy_py2 --checkpoint /home/sylee/rf/steer-frozen-vla/results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt --v2-set primary --v2-condition=+y2
+s44_val_legacy_py2 --checkpoint /home/sylee/rf/steer-frozen-vla/results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt --v2-set primary --v2-condition=+y2
+base_middle_py2 --zero-residual --v2-set timing_middle --v2-condition=+y2
+base_late_mx2 --zero-residual --v2-set timing_late --v2-condition=-x2
+s42_val_middle_py2 --checkpoint /home/sylee/rf/steer-frozen-vla/results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt --v2-set timing_middle --v2-condition=+y2
+s42_val_late_mx2 --checkpoint /home/sylee/rf/steer-frozen-vla/results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt --v2-set timing_late --v2-condition=-x2

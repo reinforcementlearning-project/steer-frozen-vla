@@ -1,0 +1,4824 @@
+{
+ "run": "s42_val_late_px2",
+ "checkpoint": "/home/sylee/rf/steer-frozen-vla/results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt",
+ "checkpoint_sha256": "a2d1bcd2df48e92d465d98c6fbf3ebd9bffcc0d20046da8b0855a97edf89eb85",
+ "residual_dims": 6,
+ "executed_residual_scale": 0.1,
+ "residual_off_after_perturb": false,
+ "n_action_steps": 10,
+ "dynamic_libero_v2_config": {
+  "name": "timing_late/+x2",
+  "split": "eval_secondary",
+  "suite": "libero_object",
+  "task_id": 0,
+  "target": "alphabet_soup_1",
+  "max_steps": 280,
+  "n_action_steps": 10,
+  "episodes": 50,
+  "eval_seed": 0,
+  "perturbation": {
+   "timing": "late",
+   "directions": [
+    "+x"
+   ],
+   "distances_m": [
+    0.02
+   ],
+   "window_m": null,
+   "chunk_phase": null,
+   "earliest_step": 10,
+   "lift_tolerance_m": 0.015,
+   "workspace_limit_m": 0.45,
+   "penetration_tolerance_m": 0.003,
+   "window": [
+    0.05,
+    0.1
+   ],
+   "chunk_phase_index": null
+  },
+  "spatial": {
+   "mode": "none",
+   "max_offset_m": 0.025,
+   "min_offset_m": 0.0,
+   "region_margin_m": 0.0,
+   "max_attempts": 50,
+   "settle_steps": 10,
+   "settle_tolerance_m": 0.005
+  },
+  "description": ""
+ },
+ "args": {
+  "checkpoint": "/home/sylee/rf/steer-frozen-vla/results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt",
+  "zero_residual": false,
+  "axis": 1,
+  "direction": 1,
+  "scale_override": null,
+  "residual_off_after_perturb": false,
+  "save_steps": true,
+  "suite": "libero_object",
+  "task_id": 0,
+  "episodes": 50,
+  "max_steps": 280,
+  "n_action_steps": 10,
+  "alpha": 0.1,
+  "seed": 0,
+  "stochastic": false,
+  "target": null,
+  "distance_cm": 0,
+  "v2_set": "timing_late",
+  "v2_condition": "+x2",
+  "out": "results/residual_v2_generalization/evals/s42_val_late_px2.json"
+ },
+ "episodes": [
+  {
+   "episode": 0,
+   "noise_seed": 0,
+   "initial_state_id": 0,
+   "initial_state_hash": "236c433be12593c09cf1bc707ae886c59243d2a28fda873b300d7e09c1bf0ec5",
+   "env_steps": 128,
+   "success": true,
+   "residual_norm_mean": 0.01744563441752689,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 0,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 28,
+     "steps_in_window": 1,
+     "first_window_step": 37,
+     "min_distance_m": 0.0960797806814259,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 37,
+    "chunk_phase": 7,
+    "eef_distance": 0.0960797806814259
+   },
+   "perturb_events": [
+    {
+     "step": 37,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.0960797806814259,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 7,
+     "steps_until_replan_obs": 3,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 1,
+   "noise_seed": 1,
+   "initial_state_id": 1,
+   "initial_state_hash": "4f84c20e4ab1156d30e7edf83629632d67366a7e570b13b32be7c00795f537ca",
+   "env_steps": 139,
+   "success": true,
+   "residual_norm_mean": 0.017948302822254545,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 1,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 34,
+     "steps_in_window": 1,
+     "first_window_step": 43,
+     "min_distance_m": 0.09199069799916236,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 43,
+    "chunk_phase": 3,
+    "eef_distance": 0.09199069799916236
+   },
+   "perturb_events": [
+    {
+     "step": 43,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.09199069799916236,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 3,
+     "steps_until_replan_obs": 7,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 2,
+   "noise_seed": 2,
+   "initial_state_id": 2,
+   "initial_state_hash": "ba69765c3b4a6bfdbdab7bf41589df45bb5589df8d043011a29cb23f7fe4fb6a",
+   "env_steps": 280,
+   "success": false,
+   "residual_norm_mean": 0.011894197013628269,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 2,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 32,
+     "steps_in_window": 1,
+     "first_window_step": 41,
+     "min_distance_m": 0.09782260933287225,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 41,
+    "chunk_phase": 1,
+    "eef_distance": 0.09782260933287225
+   },
+   "perturb_events": [
+    {
+     "step": 41,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09782260933287225,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 1,
+     "steps_until_replan_obs": 9,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 3,
+   "noise_seed": 3,
+   "initial_state_id": 3,
+   "initial_state_hash": "18dc7e2c127fdff38218762bc9bb04d72dff5b72c7ca1ff11e4b936d57507efd",
+   "env_steps": 280,
+   "success": false,
+   "residual_norm_mean": 0.011258125178782004,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 3,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 33,
+     "steps_in_window": 1,
+     "first_window_step": 42,
+     "min_distance_m": 0.09455495900102055,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 42,
+    "chunk_phase": 2,
+    "eef_distance": 0.09455495900102055
+   },
+   "perturb_events": [
+    {
+     "step": 42,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09455495900102055,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 2,
+     "steps_until_replan_obs": 8,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 4,
+   "noise_seed": 4,
+   "initial_state_id": 4,
+   "initial_state_hash": "4f32b6919ea308df3ab66cf225bc6ae7c855a4579147bda47f57d6ed478cc806",
+   "env_steps": 171,
+   "success": true,
+   "residual_norm_mean": 0.016880327364571436,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 4,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 32,
+     "steps_in_window": 1,
+     "first_window_step": 41,
+     "min_distance_m": 0.09957279837614343,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 41,
+    "chunk_phase": 1,
+    "eef_distance": 0.09957279837614343
+   },
+   "perturb_events": [
+    {
+     "step": 41,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09957279837614343,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 1,
+     "steps_until_replan_obs": 9,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 5,
+   "noise_seed": 5,
+   "initial_state_id": 5,
+   "initial_state_hash": "958f8954fcc5cc096e20c05b781f5e13dde3e79e262f47ba08725d1d2da8bbf5",
+   "env_steps": 133,
+   "success": true,
+   "residual_norm_mean": 0.019132510674907302,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 5,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 34,
+     "steps_in_window": 1,
+     "first_window_step": 43,
+     "min_distance_m": 0.09422166993239994,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 43,
+    "chunk_phase": 3,
+    "eef_distance": 0.09422166993239994
+   },
+   "perturb_events": [
+    {
+     "step": 43,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09422166993239994,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 3,
+     "steps_until_replan_obs": 7,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 6,
+   "noise_seed": 6,
+   "initial_state_id": 6,
+   "initial_state_hash": "911bb84a2b8895855f4fc9a59cbcb92ec225a17c893856ad771c1c2a5a5992bd",
+   "env_steps": 143,
+   "success": true,
+   "residual_norm_mean": 0.020560598489339953,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 6,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 37,
+     "steps_in_window": 1,
+     "first_window_step": 46,
+     "min_distance_m": 0.0918186360017071,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 46,
+    "chunk_phase": 6,
+    "eef_distance": 0.0918186360017071
+   },
+   "perturb_events": [
+    {
+     "step": 46,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.0918186360017071,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 6,
+     "steps_until_replan_obs": 4,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 7,
+   "noise_seed": 7,
+   "initial_state_id": 7,
+   "initial_state_hash": "9087f1b7c603b6d3a984bdebb1d920ae5ca5339960e6b3ff5b1af3cf7ca72546",
+   "env_steps": 157,
+   "success": true,
+   "residual_norm_mean": 0.028138920320731817,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 7,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 32,
+     "steps_in_window": 1,
+     "first_window_step": 41,
+     "min_distance_m": 0.09006890562763367,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 41,
+    "chunk_phase": 1,
+    "eef_distance": 0.09006890562763367
+   },
+   "perturb_events": [
+    {
+     "step": 41,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09006890562763367,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 1,
+     "steps_until_replan_obs": 9,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 8,
+   "noise_seed": 8,
+   "initial_state_id": 8,
+   "initial_state_hash": "32c533976dbfc040e67e8b361205ee3f020d6817d95fc629a969fdb809c429c2",
+   "env_steps": 179,
+   "success": true,
+   "residual_norm_mean": 0.016126991728289502,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 8,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 33,
+     "steps_in_window": 1,
+     "first_window_step": 42,
+     "min_distance_m": 0.0964482575251802,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 42,
+    "chunk_phase": 2,
+    "eef_distance": 0.0964482575251802
+   },
+   "perturb_events": [
+    {
+     "step": 42,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.0964482575251802,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 2,
+     "steps_until_replan_obs": 8,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 9,
+   "noise_seed": 9,
+   "initial_state_id": 9,
+   "initial_state_hash": "f309bee40ff2c659ae78d32b9ef5e46e0ea365b45c64cb86763408f6e8e2be58",
+   "env_steps": 238,
+   "success": true,
+   "residual_norm_mean": 0.01907917291724256,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 9,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 36,
+     "steps_in_window": 1,
+     "first_window_step": 45,
+     "min_distance_m": 0.09760563109684796,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 45,
+    "chunk_phase": 5,
+    "eef_distance": 0.09760563109684796
+   },
+   "perturb_events": [
+    {
+     "step": 45,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09760563109684796,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 5,
+     "steps_until_replan_obs": 5,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 10,
+   "noise_seed": 10,
+   "initial_state_id": 10,
+   "initial_state_hash": "768d3f02012bb241401c577590782538b4077e829d405bd172aa2319e9357a4d",
+   "env_steps": 137,
+   "success": true,
+   "residual_norm_mean": 0.018901178742466617,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 10,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 30,
+     "steps_in_window": 1,
+     "first_window_step": 39,
+     "min_distance_m": 0.09343855937329094,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 39,
+    "chunk_phase": 9,
+    "eef_distance": 0.09343855937329094
+   },
+   "perturb_events": [
+    {
+     "step": 39,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09343855937329094,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 9,
+     "steps_until_replan_obs": 1,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 11,
+   "noise_seed": 11,
+   "initial_state_id": 11,
+   "initial_state_hash": "4f42b0138f291f776804ed4ae502c62d3a881111c33220e7f2684bf886303e63",
+   "env_steps": 280,
+   "success": false,
+   "residual_norm_mean": 0.010990741030712212,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 11,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 33,
+     "steps_in_window": 1,
+     "first_window_step": 42,
+     "min_distance_m": 0.09930612937505659,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 42,
+    "chunk_phase": 2,
+    "eef_distance": 0.09930612937505659
+   },
+   "perturb_events": [
+    {
+     "step": 42,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09930612937505659,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 2,
+     "steps_until_replan_obs": 8,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 12,
+   "noise_seed": 12,
+   "initial_state_id": 12,
+   "initial_state_hash": "a565c2a65f69a4883d24b827c82b076bc5957d5013a90f3fa05a0e6bf895b105",
+   "env_steps": 138,
+   "success": true,
+   "residual_norm_mean": 0.022430167857395565,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 12,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 32,
+     "steps_in_window": 1,
+     "first_window_step": 41,
+     "min_distance_m": 0.0933532910458347,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 41,
+    "chunk_phase": 1,
+    "eef_distance": 0.0933532910458347
+   },
+   "perturb_events": [
+    {
+     "step": 41,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.0933532910458347,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 1,
+     "steps_until_replan_obs": 9,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 13,
+   "noise_seed": 13,
+   "initial_state_id": 13,
+   "initial_state_hash": "65486416134acccc10f7258e83453d352c4371bb109ca01a0cf79ca888f159c2",
+   "env_steps": 124,
+   "success": true,
+   "residual_norm_mean": 0.012836307692792146,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 13,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 33,
+     "steps_in_window": 1,
+     "first_window_step": 42,
+     "min_distance_m": 0.09552156211880872,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 42,
+    "chunk_phase": 2,
+    "eef_distance": 0.09552156211880872
+   },
+   "perturb_events": [
+    {
+     "step": 42,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.09552156211880872,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 2,
+     "steps_until_replan_obs": 8,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 14,
+   "noise_seed": 14,
+   "initial_state_id": 14,
+   "initial_state_hash": "e609bb6c07eb5178e8e1cf391ad0e827bd6503e43260f12904a3ce815c44281c",
+   "env_steps": 137,
+   "success": true,
+   "residual_norm_mean": 0.020715708069394538,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 14,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 31,
+     "steps_in_window": 1,
+     "first_window_step": 40,
+     "min_distance_m": 0.09508656120887674,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 40,
+    "chunk_phase": 0,
+    "eef_distance": 0.09508656120887674
+   },
+   "perturb_events": [
+    {
+     "step": 40,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.09508656120887674,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 0,
+     "steps_until_replan_obs": 0,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 15,
+   "noise_seed": 15,
+   "initial_state_id": 15,
+   "initial_state_hash": "0fd6af810a87b3e0f2f7e0351ac3d4a7bce72d872937f5c96eac54467a1deb67",
+   "env_steps": 280,
+   "success": false,
+   "residual_norm_mean": 0.010841152244912727,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 15,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 35,
+     "steps_in_window": 1,
+     "first_window_step": 44,
+     "min_distance_m": 0.09400225493297865,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 44,
+    "chunk_phase": 4,
+    "eef_distance": 0.09400225493297865
+   },
+   "perturb_events": [
+    {
+     "step": 44,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09400225493297865,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 4,
+     "steps_until_replan_obs": 6,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 16,
+   "noise_seed": 16,
+   "initial_state_id": 16,
+   "initial_state_hash": "eafa610a6fa95297b6b0435bdcbcc768885a733a315274b9cc105b3e4b1361df",
+   "env_steps": 280,
+   "success": false,
+   "residual_norm_mean": 0.014236057080727603,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 16,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 31,
+     "steps_in_window": 1,
+     "first_window_step": 40,
+     "min_distance_m": 0.09907265190562255,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 40,
+    "chunk_phase": 0,
+    "eef_distance": 0.09907265190562255
+   },
+   "perturb_events": [
+    {
+     "step": 40,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09907265190562255,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 0,
+     "steps_until_replan_obs": 0,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 17,
+   "noise_seed": 17,
+   "initial_state_id": 17,
+   "initial_state_hash": "8064e19a916ccf41d4b3cdd7e7372be724fa336cdfaf9624f49bdfca247f4e0c",
+   "env_steps": 145,
+   "success": true,
+   "residual_norm_mean": 0.018499015490042754,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 17,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 34,
+     "steps_in_window": 1,
+     "first_window_step": 43,
+     "min_distance_m": 0.09237598286508249,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 43,
+    "chunk_phase": 3,
+    "eef_distance": 0.09237598286508249
+   },
+   "perturb_events": [
+    {
+     "step": 43,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.09237598286508249,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 3,
+     "steps_until_replan_obs": 7,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 18,
+   "noise_seed": 18,
+   "initial_state_id": 18,
+   "initial_state_hash": "881042dcd8f956a9f495f45610d6c85a64f51e1bff243a0ebdf38ad024a285de",
+   "env_steps": 138,
+   "success": true,
+   "residual_norm_mean": 0.016280247073998486,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 18,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 34,
+     "steps_in_window": 1,
+     "first_window_step": 43,
+     "min_distance_m": 0.09433652527564412,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 43,
+    "chunk_phase": 3,
+    "eef_distance": 0.09433652527564412
+   },
+   "perturb_events": [
+    {
+     "step": 43,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.09433652527564412,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 3,
+     "steps_until_replan_obs": 7,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 19,
+   "noise_seed": 19,
+   "initial_state_id": 19,
+   "initial_state_hash": "54da57bdf36a27d968f0fc7b6120065a611662d2afb0fae8711e19336b330511",
+   "env_steps": 139,
+   "success": true,
+   "residual_norm_mean": 0.0179129670769405,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 19,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 34,
+     "steps_in_window": 1,
+     "first_window_step": 43,
+     "min_distance_m": 0.0927766953578851,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 43,
+    "chunk_phase": 3,
+    "eef_distance": 0.0927766953578851
+   },
+   "perturb_events": [
+    {
+     "step": 43,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.0927766953578851,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 3,
+     "steps_until_replan_obs": 7,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 20,
+   "noise_seed": 20,
+   "initial_state_id": 20,
+   "initial_state_hash": "41a248a5226973d6829b6d4aab550383cc0816a43c725f48f6bf3046249a94be",
+   "env_steps": 137,
+   "success": true,
+   "residual_norm_mean": 0.016263213239773346,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 20,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 36,
+     "steps_in_window": 1,
+     "first_window_step": 45,
+     "min_distance_m": 0.09573063865916161,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 45,
+    "chunk_phase": 5,
+    "eef_distance": 0.09573063865916161
+   },
+   "perturb_events": [
+    {
+     "step": 45,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09573063865916161,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 5,
+     "steps_until_replan_obs": 5,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 21,
+   "noise_seed": 21,
+   "initial_state_id": 21,
+   "initial_state_hash": "b3bbdd55ab11edef089b15be8c2decdb58730715f21e15ad4e48f97ea57b87d3",
+   "env_steps": 138,
+   "success": true,
+   "residual_norm_mean": 0.01621581266121264,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 21,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 35,
+     "steps_in_window": 1,
+     "first_window_step": 44,
+     "min_distance_m": 0.09360924745670879,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 44,
+    "chunk_phase": 4,
+    "eef_distance": 0.09360924745670879
+   },
+   "perturb_events": [
+    {
+     "step": 44,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09360924745670879,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 4,
+     "steps_until_replan_obs": 6,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 22,
+   "noise_seed": 22,
+   "initial_state_id": 22,
+   "initial_state_hash": "91cecd196218505e6d7489cd7b4b53d4f6be02d45dde3654838d94094195040b",
+   "env_steps": 280,
+   "success": false,
+   "residual_norm_mean": 0.010676274249064071,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 22,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 36,
+     "steps_in_window": 1,
+     "first_window_step": 45,
+     "min_distance_m": 0.09074023702408217,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 45,
+    "chunk_phase": 5,
+    "eef_distance": 0.09074023702408217
+   },
+   "perturb_events": [
+    {
+     "step": 45,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09074023702408217,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 5,
+     "steps_until_replan_obs": 5,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 23,
+   "noise_seed": 23,
+   "initial_state_id": 23,
+   "initial_state_hash": "9c8d9c39d67ac4f3e3adc11ba3665e3c96f0428a9a822553135b14271bcf9963",
+   "env_steps": 280,
+   "success": false,
+   "residual_norm_mean": 0.009695101221690752,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 23,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 28,
+     "steps_in_window": 1,
+     "first_window_step": 37,
+     "min_distance_m": 0.0977886815339965,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 37,
+    "chunk_phase": 7,
+    "eef_distance": 0.0977886815339965
+   },
+   "perturb_events": [
+    {
+     "step": 37,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.0977886815339965,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 7,
+     "steps_until_replan_obs": 3,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 24,
+   "noise_seed": 24,
+   "initial_state_id": 24,
+   "initial_state_hash": "d0605f0c470bdbfff089cb0642d959d9ae68c6e00af9bebb3e82019429b109c3",
+   "env_steps": 280,
+   "success": false,
+   "residual_norm_mean": 0.010830516740679742,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 24,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 36,
+     "steps_in_window": 1,
+     "first_window_step": 45,
+     "min_distance_m": 0.09078527728802281,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 45,
+    "chunk_phase": 5,
+    "eef_distance": 0.09078527728802281
+   },
+   "perturb_events": [
+    {
+     "step": 45,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.09078527728802281,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 5,
+     "steps_until_replan_obs": 5,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 25,
+   "noise_seed": 25,
+   "initial_state_id": 25,
+   "initial_state_hash": "701b7d78feb099b659e10085b32b00bd1b3cac9083aad3e9c6233014e85d159b",
+   "env_steps": 280,
+   "success": false,
+   "residual_norm_mean": 0.01023833961226046,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 25,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 33,
+     "steps_in_window": 1,
+     "first_window_step": 42,
+     "min_distance_m": 0.09695801221611014,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 42,
+    "chunk_phase": 2,
+    "eef_distance": 0.09695801221611014
+   },
+   "perturb_events": [
+    {
+     "step": 42,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09695801221611014,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 2,
+     "steps_until_replan_obs": 8,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 26,
+   "noise_seed": 26,
+   "initial_state_id": 26,
+   "initial_state_hash": "8663c4c1c4eff8f97555a3719c2a5ff54f095a2d7a12a022d07e90c2a8869362",
+   "env_steps": 280,
+   "success": false,
+   "residual_norm_mean": 0.011653005012444087,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 26,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 33,
+     "steps_in_window": 1,
+     "first_window_step": 42,
+     "min_distance_m": 0.09738536331824384,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 42,
+    "chunk_phase": 2,
+    "eef_distance": 0.09738536331824384
+   },
+   "perturb_events": [
+    {
+     "step": 42,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09738536331824384,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 2,
+     "steps_until_replan_obs": 8,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 27,
+   "noise_seed": 27,
+   "initial_state_id": 27,
+   "initial_state_hash": "b9e7d0716330b6654d27b3f9f9b69940586fee9d90eb6ea8ad11504bf8796daf",
+   "env_steps": 280,
+   "success": false,
+   "residual_norm_mean": 0.04989876480373953,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 27,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 33,
+     "steps_in_window": 1,
+     "first_window_step": 42,
+     "min_distance_m": 0.09184841352646411,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 42,
+    "chunk_phase": 2,
+    "eef_distance": 0.09184841352646411
+   },
+   "perturb_events": [
+    {
+     "step": 42,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09184841352646411,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 2,
+     "steps_until_replan_obs": 8,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 28,
+   "noise_seed": 28,
+   "initial_state_id": 28,
+   "initial_state_hash": "4629a51181eb8d918c8ddfc81d298221b5c3b824f696290f96081203ab0ae1d7",
+   "env_steps": 179,
+   "success": true,
+   "residual_norm_mean": 0.018390681490551827,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 28,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 33,
+     "steps_in_window": 1,
+     "first_window_step": 42,
+     "min_distance_m": 0.09237990604118519,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 42,
+    "chunk_phase": 2,
+    "eef_distance": 0.09237990604118519
+   },
+   "perturb_events": [
+    {
+     "step": 42,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.09237990604118519,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 2,
+     "steps_until_replan_obs": 8,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 29,
+   "noise_seed": 29,
+   "initial_state_id": 29,
+   "initial_state_hash": "c0f9fc0a0577e90da11811452e4793b6b4ccd184dcbf2879af9db44bd719cb84",
+   "env_steps": 139,
+   "success": true,
+   "residual_norm_mean": 0.017652908842608655,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 29,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 35,
+     "steps_in_window": 1,
+     "first_window_step": 44,
+     "min_distance_m": 0.09437645464863995,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 44,
+    "chunk_phase": 4,
+    "eef_distance": 0.09437645464863995
+   },
+   "perturb_events": [
+    {
+     "step": 44,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.09437645464863995,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 4,
+     "steps_until_replan_obs": 6,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 30,
+   "noise_seed": 30,
+   "initial_state_id": 30,
+   "initial_state_hash": "90ccc71d0a970157396dc28f768a40dfd2e7c2b70e09306a126054e9414f2359",
+   "env_steps": 177,
+   "success": true,
+   "residual_norm_mean": 0.018163079932584602,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 30,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 32,
+     "steps_in_window": 1,
+     "first_window_step": 41,
+     "min_distance_m": 0.09979136593023352,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 41,
+    "chunk_phase": 1,
+    "eef_distance": 0.09979136593023352
+   },
+   "perturb_events": [
+    {
+     "step": 41,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09979136593023352,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 1,
+     "steps_until_replan_obs": 9,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 31,
+   "noise_seed": 31,
+   "initial_state_id": 31,
+   "initial_state_hash": "3cd25156ad20fde460adc2fdfa5a1f3b2697c1f4da0039ec694017a924665c78",
+   "env_steps": 138,
+   "success": true,
+   "residual_norm_mean": 0.01721420691119156,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 31,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 34,
+     "steps_in_window": 1,
+     "first_window_step": 43,
+     "min_distance_m": 0.09008087808639322,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 43,
+    "chunk_phase": 3,
+    "eef_distance": 0.09008087808639322
+   },
+   "perturb_events": [
+    {
+     "step": 43,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09008087808639322,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 3,
+     "steps_until_replan_obs": 7,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 32,
+   "noise_seed": 32,
+   "initial_state_id": 32,
+   "initial_state_hash": "33632a6b0551e902d92034264e204a7f920f8320cee0ae15127dc2912aee3bb6",
+   "env_steps": 280,
+   "success": false,
+   "residual_norm_mean": 0.01025743377062359,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 32,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 29,
+     "steps_in_window": 1,
+     "first_window_step": 38,
+     "min_distance_m": 0.09802577548321155,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 38,
+    "chunk_phase": 8,
+    "eef_distance": 0.09802577548321155
+   },
+   "perturb_events": [
+    {
+     "step": 38,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09802577548321155,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 8,
+     "steps_until_replan_obs": 2,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 33,
+   "noise_seed": 33,
+   "initial_state_id": 33,
+   "initial_state_hash": "aee0c87596d4d6a6befc5043891c3974f032e3178a124df1432f0fa0b3bf9a45",
+   "env_steps": 280,
+   "success": false,
+   "residual_norm_mean": 0.010366799865317132,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 33,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 34,
+     "steps_in_window": 1,
+     "first_window_step": 43,
+     "min_distance_m": 0.09690750926565743,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 43,
+    "chunk_phase": 3,
+    "eef_distance": 0.09690750926565743
+   },
+   "perturb_events": [
+    {
+     "step": 43,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.09690750926565743,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 3,
+     "steps_until_replan_obs": 7,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 34,
+   "noise_seed": 34,
+   "initial_state_id": 34,
+   "initial_state_hash": "27f5f57110f2d0ea0011d490d24eea145c397b754ae9a603f3e7692f9ac9aee4",
+   "env_steps": 137,
+   "success": true,
+   "residual_norm_mean": 0.01594693484260653,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 34,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 36,
+     "steps_in_window": 1,
+     "first_window_step": 45,
+     "min_distance_m": 0.09753478424863105,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 45,
+    "chunk_phase": 5,
+    "eef_distance": 0.09753478424863105
+   },
+   "perturb_events": [
+    {
+     "step": 45,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.09753478424863105,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 5,
+     "steps_until_replan_obs": 5,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 35,
+   "noise_seed": 35,
+   "initial_state_id": 35,
+   "initial_state_hash": "612d949c30d63210869aac567149299dc356f801183722ab1bbc8064281ca631",
+   "env_steps": 181,
+   "success": true,
+   "residual_norm_mean": 0.017824374172754214,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 35,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 35,
+     "steps_in_window": 1,
+     "first_window_step": 44,
+     "min_distance_m": 0.09730383848838904,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 44,
+    "chunk_phase": 4,
+    "eef_distance": 0.09730383848838904
+   },
+   "perturb_events": [
+    {
+     "step": 44,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09730383848838904,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 4,
+     "steps_until_replan_obs": 6,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 36,
+   "noise_seed": 36,
+   "initial_state_id": 36,
+   "initial_state_hash": "c139f5ffc851413edfa721c017c8c1588eb428f776f0063a918fc15275c6e01f",
+   "env_steps": 139,
+   "success": true,
+   "residual_norm_mean": 0.022623463319413523,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 36,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 33,
+     "steps_in_window": 1,
+     "first_window_step": 42,
+     "min_distance_m": 0.09211553144359005,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 42,
+    "chunk_phase": 2,
+    "eef_distance": 0.09211553144359005
+   },
+   "perturb_events": [
+    {
+     "step": 42,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09211553144359005,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 2,
+     "steps_until_replan_obs": 8,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 37,
+   "noise_seed": 37,
+   "initial_state_id": 37,
+   "initial_state_hash": "acbbf391b6866617aebe1d0d8678efd2a56e2259d930b4c20d2e907ed1206668",
+   "env_steps": 131,
+   "success": true,
+   "residual_norm_mean": 0.017086036218941666,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 37,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 30,
+     "steps_in_window": 1,
+     "first_window_step": 39,
+     "min_distance_m": 0.09154490110946936,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 39,
+    "chunk_phase": 9,
+    "eef_distance": 0.09154490110946936
+   },
+   "perturb_events": [
+    {
+     "step": 39,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09154490110946936,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 9,
+     "steps_until_replan_obs": 1,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 38,
+   "noise_seed": 38,
+   "initial_state_id": 38,
+   "initial_state_hash": "8bc1d66d5b4eaee62cf4636480493e0f5d77e483d89f09bb7c9c732aff3f498a",
+   "env_steps": 280,
+   "success": false,
+   "residual_norm_mean": 0.012470725777425936,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 38,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 37,
+     "steps_in_window": 1,
+     "first_window_step": 46,
+     "min_distance_m": 0.09835067235467933,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 46,
+    "chunk_phase": 6,
+    "eef_distance": 0.09835067235467933
+   },
+   "perturb_events": [
+    {
+     "step": 46,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09835067235467933,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 6,
+     "steps_until_replan_obs": 4,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 39,
+   "noise_seed": 39,
+   "initial_state_id": 39,
+   "initial_state_hash": "f05b27d568b738c217ebf123577daa59ea9672955df6fa16a30801cbdae73a04",
+   "env_steps": 141,
+   "success": true,
+   "residual_norm_mean": 0.022047977201006513,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 39,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 33,
+     "steps_in_window": 1,
+     "first_window_step": 42,
+     "min_distance_m": 0.09369066709967626,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 42,
+    "chunk_phase": 2,
+    "eef_distance": 0.09369066709967626
+   },
+   "perturb_events": [
+    {
+     "step": 42,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.09369066709967626,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 2,
+     "steps_until_replan_obs": 8,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 40,
+   "noise_seed": 40,
+   "initial_state_id": 40,
+   "initial_state_hash": "b93fb81f236cb41caf81b28faef320d6eb18c6fb27385c00c6da0f818bb1ffac",
+   "env_steps": 180,
+   "success": true,
+   "residual_norm_mean": 0.016069297559766306,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 40,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 32,
+     "steps_in_window": 1,
+     "first_window_step": 41,
+     "min_distance_m": 0.09389174795056436,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 41,
+    "chunk_phase": 1,
+    "eef_distance": 0.09389174795056436
+   },
+   "perturb_events": [
+    {
+     "step": 41,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.09389174795056436,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 1,
+     "steps_until_replan_obs": 9,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 41,
+   "noise_seed": 41,
+   "initial_state_id": 41,
+   "initial_state_hash": "5de5c845f601c364aa6993e69418384e4f45307c26a3fcfca7d6880522d8e62d",
+   "env_steps": 147,
+   "success": true,
+   "residual_norm_mean": 0.021007123675678863,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 41,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 35,
+     "steps_in_window": 1,
+     "first_window_step": 44,
+     "min_distance_m": 0.09526873424883005,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 44,
+    "chunk_phase": 4,
+    "eef_distance": 0.09526873424883005
+   },
+   "perturb_events": [
+    {
+     "step": 44,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.09526873424883005,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 4,
+     "steps_until_replan_obs": 6,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 42,
+   "noise_seed": 42,
+   "initial_state_id": 42,
+   "initial_state_hash": "123be36796aa7392d638f41f5613a4dd56f3f31581c0379df6dbdd54b734c5c3",
+   "env_steps": 280,
+   "success": false,
+   "residual_norm_mean": 0.01028638680831396,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 42,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 28,
+     "steps_in_window": 1,
+     "first_window_step": 37,
+     "min_distance_m": 0.0975480592607239,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 37,
+    "chunk_phase": 7,
+    "eef_distance": 0.0975480592607239
+   },
+   "perturb_events": [
+    {
+     "step": 37,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.0975480592607239,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 7,
+     "steps_until_replan_obs": 3,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 43,
+   "noise_seed": 43,
+   "initial_state_id": 43,
+   "initial_state_hash": "fd1e94a1086570d9ecdcc5cee574025522d9f79319151f8d53ffa2db8ab97077",
+   "env_steps": 138,
+   "success": true,
+   "residual_norm_mean": 0.019324250019870808,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 43,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 34,
+     "steps_in_window": 1,
+     "first_window_step": 43,
+     "min_distance_m": 0.09502916668508032,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 43,
+    "chunk_phase": 3,
+    "eef_distance": 0.09502916668508032
+   },
+   "perturb_events": [
+    {
+     "step": 43,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.09502916668508032,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 3,
+     "steps_until_replan_obs": 7,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 44,
+   "noise_seed": 44,
+   "initial_state_id": 44,
+   "initial_state_hash": "2322af6f5abf2f8b2a7fa1dcb844ee463d5a6b41b1868adfa244cb00a324a09c",
+   "env_steps": 182,
+   "success": true,
+   "residual_norm_mean": 0.018224097082166227,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 44,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 37,
+     "steps_in_window": 1,
+     "first_window_step": 46,
+     "min_distance_m": 0.09716900739123538,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 46,
+    "chunk_phase": 6,
+    "eef_distance": 0.09716900739123538
+   },
+   "perturb_events": [
+    {
+     "step": 46,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09716900739123538,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 6,
+     "steps_until_replan_obs": 4,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 45,
+   "noise_seed": 45,
+   "initial_state_id": 45,
+   "initial_state_hash": "5de657ac8eda3c2e5adb78fb1b418b1fa27deff381857d9cc413ebde9fa9f031",
+   "env_steps": 139,
+   "success": true,
+   "residual_norm_mean": 0.018116826854860612,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 45,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 29,
+     "steps_in_window": 1,
+     "first_window_step": 38,
+     "min_distance_m": 0.09817074160680228,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 38,
+    "chunk_phase": 8,
+    "eef_distance": 0.09817074160680228
+   },
+   "perturb_events": [
+    {
+     "step": 38,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.09817074160680228,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 8,
+     "steps_until_replan_obs": 2,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 46,
+   "noise_seed": 46,
+   "initial_state_id": 46,
+   "initial_state_hash": "a77ba7f85459123450f1b7a67af4b8133ae565d049662e88bba45bcd038a88c7",
+   "env_steps": 171,
+   "success": true,
+   "residual_norm_mean": 0.02053786948192538,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 46,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 31,
+     "steps_in_window": 1,
+     "first_window_step": 40,
+     "min_distance_m": 0.0920499252418315,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 40,
+    "chunk_phase": 0,
+    "eef_distance": 0.0920499252418315
+   },
+   "perturb_events": [
+    {
+     "step": 40,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.0920499252418315,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 0,
+     "steps_until_replan_obs": 0,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 47,
+   "noise_seed": 47,
+   "initial_state_id": 47,
+   "initial_state_hash": "b04f0fc3aaa5f180d1a407d9ed0927f767afa26e242848a6bed49760d191ed5a",
+   "env_steps": 137,
+   "success": true,
+   "residual_norm_mean": 0.01697940713161752,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 47,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 32,
+     "steps_in_window": 1,
+     "first_window_step": 41,
+     "min_distance_m": 0.09969773261272737,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 41,
+    "chunk_phase": 1,
+    "eef_distance": 0.09969773261272737
+   },
+   "perturb_events": [
+    {
+     "step": 41,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.09969773261272737,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 1,
+     "steps_until_replan_obs": 9,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 48,
+   "noise_seed": 48,
+   "initial_state_id": 48,
+   "initial_state_hash": "e1de9296ddd34f135e506386274cee72dafa8f028856ccd8e2d5fd03aa21b95c",
+   "env_steps": 140,
+   "success": true,
+   "residual_norm_mean": 0.02065243758926434,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 48,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 33,
+     "steps_in_window": 1,
+     "first_window_step": 42,
+     "min_distance_m": 0.09567866156919136,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 42,
+    "chunk_phase": 2,
+    "eef_distance": 0.09567866156919136
+   },
+   "perturb_events": [
+    {
+     "step": 42,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.11909425548213741,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "after": [
+      -0.0990942554821374,
+      -0.23978121719843146,
+      0.03839291037244388
+     ],
+     "eef_distance": 0.09567866156919136,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 2,
+     "steps_until_replan_obs": 8,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "episode": 49,
+   "noise_seed": 49,
+   "initial_state_id": 49,
+   "initial_state_hash": "8b0b06fbfc3b932514f44956b65bb12f6bf6eae310c41fb002a878d8fe95d5ba",
+   "env_steps": 133,
+   "success": true,
+   "residual_norm_mean": 0.017559835834330635,
+   "dynamic_libero": {
+    "config": "timing_late/+x2",
+    "split": "eval_secondary",
+    "episode_seed": 49,
+    "choice": {
+     "direction": "+x",
+     "axis": 0,
+     "sign": 1,
+     "distance_m": 0.02
+    },
+    "spatial": {
+     "mode": "none",
+     "applied": false
+    },
+    "diagnostics": {
+     "steps_checked": 28,
+     "steps_in_window": 1,
+     "first_window_step": 37,
+     "min_distance_m": 0.09397735538095857,
+     "blocked": {
+      "robot_contact": 0,
+      "object_lifted": 0,
+      "chunk_phase_mismatch": 0
+     }
+    },
+    "status": "applied",
+    "reason": null,
+    "step": 37,
+    "chunk_phase": 7,
+    "eef_distance": 0.09397735538095857
+   },
+   "perturb_events": [
+    {
+     "step": 37,
+     "config": {
+      "timing": "late",
+      "directions": [
+       "+x"
+      ],
+      "distances_m": [
+       0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "axis": 0,
+      "direction": 1,
+      "distance_m": 0.02
+     },
+     "before": [
+      -0.1190942554821374,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "after": [
+      -0.09909425548213739,
+      -0.23978121719843148,
+      0.03839291037244387
+     ],
+     "eef_distance": 0.09397735538095857,
+     "robot_contact_before": false,
+     "applied": true,
+     "rejection": null,
+     "timing": "late",
+     "window_m": [
+      0.05,
+      0.1
+     ],
+     "direction": "+x",
+     "distance_m": 0.02,
+     "chunk_phase": 7,
+     "steps_until_replan_obs": 3,
+     "chunk_phase_target": null,
+     "last_reported_replan_step": null,
+     "chunk_phase_from_reported_replan": null,
+     "actual_displacement_m": 0.020000000000000004,
+     "actual_displacement_vector_m": [
+      0.020000000000000004,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  }
+ ]
+}

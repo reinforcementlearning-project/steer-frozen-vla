@@ -1,0 +1,4 @@
+base --zero-residual
+s42_val --checkpoint /home/sylee/rf/steer-frozen-vla/results/residual_6d_rand_fixa001_2cm_s42_20k/checkpoints/ckpt_00012000.pt
+s43_val --checkpoint /home/sylee/rf/steer-frozen-vla/results/residual_6d_rand_fixa001_2cm_s43_20k/checkpoints/ckpt_00007000.pt
+s44_val --checkpoint /home/sylee/rf/steer-frozen-vla/results/residual_6d_rand_fixa001_2cm_s44_20k/checkpoints/ckpt_00006000.pt

@@ -5,6 +5,11 @@ seeds, perturbation and report schema) so results pair directly with the frozen
 base evals (results/eval50_*.json). Only the residual differs: the SAC actor's
 deterministic action (tanh of the mean) instead of zeros. Read-only with
 respect to the shared SAC code and the training run directory.
+
+Dynamic LIBERO v2 adapter: with --v2-set/--v2-condition the simulator is built by
+envs.dynamic_libero_config.make_dynamic_libero(cfg) instead of the v1 DynamicLibero;
+everything else (VLA, ResidualEnv, actor, episode loop, report schema) is unchanged.
+The config's horizon, chunk length and eval seed must match the CLI arguments.
 """
 import argparse
 import hashlib
@@ -19,6 +24,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from envs.libero_env import make_libero
 from envs.perturbation import DynamicLibero, PerturbationConfig
+from envs.dynamic_libero_config import config_to_dict, load_eval_set, make_dynamic_libero, parse_condition
 from models.smolvla_wrapper import FrozenSmolVLA
 from policies.residual_policy import ResidualEnv
 from rl import SACAgent, SACConfig
@@ -47,6 +53,9 @@ def main():
     p.add_argument("--stochastic", action="store_true", help="sample instead of deterministic mean action")
     p.add_argument("--target")
     p.add_argument("--distance-cm", type=float, default=0)
+    p.add_argument("--v2-set", help="Dynamic LIBERO v2 eval set (configs/dynamic_libero_v2.yaml), e.g. timing_middle")
+    p.add_argument("--v2-condition", help="condition token, e.g. +y2 or -x4 (pass as --v2-condition=-x4); "
+                   "tokens outside the set's list reuse the set's timing/split with that direction/size")
     p.add_argument("--out", required=True)
     args = p.parse_args()
     if args.episodes < 1 or args.max_steps < 1:
@@ -71,7 +80,21 @@ def main():
     artifacts = json.loads((ROOT / "results/artifacts.json").read_text())
     base = FrozenSmolVLA(artifacts["checkpoint"], artifacts["backbone_path"],
                         args.n_action_steps, args.seed)
-    sim_env = make_libero(args.suite, args.task_id, max_steps=args.max_steps)
+    v2_cfg = None
+    if args.v2_set:
+        if args.target or not args.v2_condition:
+            p.error("--v2-set needs --v2-condition and excludes --target/--axis/--direction/--distance-cm")
+        sets = load_eval_set(args.v2_set, perturbation=parse_condition(args.v2_condition))
+        v2_cfg = next(iter(sets.values()))
+        from dataclasses import replace
+        v2_cfg = replace(v2_cfg, name=f"{args.v2_set}/{args.v2_condition}")
+        for key, val in (("max_steps", args.max_steps), ("n_action_steps", args.n_action_steps),
+                         ("eval_seed", args.seed), ("suite", args.suite), ("task_id", args.task_id)):
+            if getattr(v2_cfg, key) != val:
+                p.error(f"v2 config {key}={getattr(v2_cfg, key)} differs from CLI {val}")
+        sim_env = make_dynamic_libero(v2_cfg)
+    else:
+        sim_env = make_libero(args.suite, args.task_id, max_steps=args.max_steps)
     if args.target:
         sim_env = DynamicLibero(sim_env, PerturbationConfig(args.target, args.distance_cm / 100,
                                                             axis=args.axis, direction=args.direction))
@@ -89,6 +112,7 @@ def main():
               "checkpoint_sha256": hashlib.sha256(ckpt_path.read_bytes()).hexdigest() if ckpt_path else None,
               "checkpoint_trainer": {k: v for k, v in state["trainer"].items() if k != "config"} if state else None,
               "deterministic": not args.stochastic, "residual_dims": residual_dims,
+              "dynamic_libero_v2_config": config_to_dict(v2_cfg) if v2_cfg is not None else None,
               "executed_residual_scale": exec_scale,
               "residual_off_after_perturb": args.residual_off_after_perturb,
               "checkpoint_n_action_steps": base.checkpoint_n_action_steps,
@@ -132,6 +156,8 @@ def main():
                       "noise_seed": args.seed + episode,
                       "residual_norm_mean": float(np.mean(norms)), "residual_norm_max": float(np.max(norms)),
                       "perturb_events": info.get("perturb_events", [])}
+            if v2_cfg is not None:
+                record["dynamic_libero"] = info.get("dynamic_libero")
             report["episodes"].append(record)
             out.write_text(json.dumps(report, indent=2))
             print(json.dumps({k: v for k, v in record.items() if k != "trace"}), flush=True)
