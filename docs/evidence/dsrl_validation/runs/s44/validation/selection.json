@@ -1,0 +1,13 @@
+{
+  "rule": "highest score; ties broken in favour of the later checkpoint",
+  "rule_source": "configs/validation_rule.json on origin/eval/residual-robustness, applied unchanged",
+  "selected_decision": 700,
+  "selected_control_steps": 6888,
+  "selected_grad_updates": 4450,
+  "selected_checkpoint": "results/dsrl_train_v1_s44/checkpoints/ckpt_00000700.pt",
+  "selected_score": 35,
+  "episodes": 40,
+  "final_score": 21,
+  "final_checkpoint": "results/dsrl_train_v1_s44/checkpoints/ckpt_00002000.pt",
+  "n_candidates": 19
+}

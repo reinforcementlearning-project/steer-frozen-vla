@@ -1,0 +1,9 @@
+policy,score,base_score,base_only_fails,base_only_succeeds,sign_test_p,mean_steps_when_success,failures,failures_at_280_steps
+gaussian,34,31,4,1,0.375,159.9,6,6
+s42_selected_ckpt15k,36,31,6,1,0.125,156.4,4,4
+s43_selected_ckpt2k,34,31,4,1,0.375,151.9,6,6
+s43_selected_trained_ckpt13k,33,31,3,1,0.625,152.6,7,7
+s44_selected_ckpt7k,35,31,6,2,0.2891,157.7,5,5
+s42_final_ckpt20k,27,31,2,6,0.2891,151.8,13,13
+s43_final_ckpt20k,21,31,1,11,0.0063,149.7,19,19
+s44_final_ckpt20k,21,31,1,11,0.0063,153.5,19,19

@@ -1,0 +1,108 @@
+{
+  "args": {
+    "preset": "train_v1",
+    "total_env_steps": 20000,
+    "warmup_steps": 2560,
+    "batch_size": 256,
+    "utd_ratio": 10,
+    "gamma": 0.99,
+    "fixed_entropy_coef": 0.01,
+    "autotune_entropy": false,
+    "latent_dims": 6,
+    "latent_steps": 1,
+    "latent_bound": 2.5,
+    "latent_fill": "gaussian",
+    "obs_mode": "proprio_ref",
+    "seed": 43,
+    "run_dir": "results/dsrl_train_v1_s43",
+    "resume": false,
+    "log_every": 100,
+    "checkpoint_every": 1000
+  },
+  "artifacts": {
+    "model": "lerobot/smolvla_libero",
+    "revision": "a24f1f380461b665158d52acd140152c79e8b36d",
+    "checkpoint": "/home/sylee/rf/.cache/huggingface/hub/models--lerobot--smolvla_libero/snapshots/a24f1f380461b665158d52acd140152c79e8b36d",
+    "backbone": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+    "backbone_revision": "4cde9d208e19519c36917aa170fffc7e381aa0ad",
+    "backbone_path": "/home/sylee/rf/.cache/huggingface/hub/models--HuggingFaceTB--SmolVLM2-500M-Video-Instruct/snapshots/4cde9d208e19519c36917aa170fffc7e381aa0ad",
+    "hf_home": "/home/sylee/rf/.cache/huggingface"
+  },
+  "environment": {
+    "name": "train_v1",
+    "split": "train",
+    "suite": "libero_object",
+    "task_id": 0,
+    "target": "alphabet_soup_1",
+    "max_steps": 280,
+    "n_action_steps": 10,
+    "episodes": null,
+    "eval_seed": null,
+    "perturbation": {
+      "timing": "legacy",
+      "directions": [
+        "+x",
+        "-x",
+        "+y",
+        "-y"
+      ],
+      "distances_m": [
+        0.02
+      ],
+      "window_m": null,
+      "chunk_phase": null,
+      "earliest_step": 10,
+      "lift_tolerance_m": 0.015,
+      "workspace_limit_m": 0.45,
+      "penetration_tolerance_m": 0.003,
+      "window": [
+        0.05,
+        0.18
+      ],
+      "chunk_phase_index": null
+    },
+    "spatial": {
+      "mode": "none",
+      "max_offset_m": 0.025,
+      "min_offset_m": 0.0,
+      "region_margin_m": 0.0,
+      "max_attempts": 50,
+      "settle_steps": 10,
+      "settle_tolerance_m": 0.005
+    },
+    "description": "Early 18cm (legacy rule), random +-x/+-y 2cm per episode, 280 steps"
+  },
+  "latent": {
+    "dims": 6,
+    "steps": 1,
+    "bound": 2.5,
+    "fill": "gaussian"
+  },
+  "observation": "proprio_ref",
+  "trainer_step_unit": "RL decision (one VLA chunk); control steps are in budget.csv",
+  "warmup_decisions": 256,
+  "vla_budget": "initial reference query charged to first decision",
+  "evaluation_during_training": false,
+  "git_commit": "3ca2bdcb298e9643bb20202bc4d394b2d197c303",
+  "source_sha256_lf": {
+    "train_dsrl.py": "0961868ab59bb8467cc758bd44fe497f3fd07f89e0f9e67728a63372fb1ac5d2",
+    "rl/__init__.py": "fe64e0a0d1b199be64578f278802ae2187da4bcf2299e15afc231e2f7eea50b1",
+    "rl/interface.py": "386bb23b9dad1616caec9223fe001fd19df0f58045ba76d45dcdffc4c3bb381a",
+    "rl/logger.py": "213630746637d5c13fa1dfec64f1f336c47dec8f01afa0563b8df13b035118f2",
+    "rl/replay_buffer.py": "6f3569a18d5fbbbbd4cede3c478aa134914d6dc3a94cc9e8c49749b93d507e2c",
+    "rl/sac.py": "ecd14c7d6bc0867cbcec1367cea95d78b4b1cf006598e350e7386d698ff3687d",
+    "rl/toy_env.py": "2f7f8c63e843631da1f361766bd412afd16bf0a3eb856f301e39b3520566be42",
+    "rl/trainer.py": "05e13ee44266e3556e2b2541dd8a78e3bfedd171d17a7189ff0c3e64de271fd4",
+    "envs/__init__.py": "116199e270f0916ea8e9a57878daac2aeb4a71f0b731a826052d288481baa8c4",
+    "envs/dynamic_libero.py": "df0f8dd511f5e3d5633c87f5594b8751fa7dfef106b4343ce82683cac361e06d",
+    "envs/dynamic_libero_config.py": "fb748deb235f0f47a1a0f24656e9a6f4a00257a9795b789f72e40521b84f3760",
+    "envs/libero_env.py": "f671c0894a938131de15d3a1a44b3003bc215dbec69864173e8abb4c6663ec1d",
+    "envs/perturbation.py": "57b4ceea55e7eb14dcbf4880e0e37aa2635613bacbc6150a1f5ac973b2bd6765",
+    "models/__init__.py": "ef252649e84019da4b64c729a1cea1f3afea0783bc7f31518378bf9698722aa4",
+    "models/noise_wrapper.py": "a6c58679d32c512a909f9bb813377eb8c3c0750ca96479cbfd2e1c61a55c838b",
+    "models/smolvla_wrapper.py": "f1e54e393f15a0ab9714058c84a6747506c3d80f03d9e6f45d3ce1b75979e247",
+    "policies/__init__.py": "4cf03247fa2b44a25af1cfe292bb52ed0b25cf0a5df038e4e8520779ce8fd76d",
+    "policies/noise_policy.py": "3b36d889cf537c5cf6a75f4f5a52dfa8242fbeb9d2b5103e1da80822022f658d",
+    "policies/residual_policy.py": "a68a4c65f61a4e032aaa2dced83229c760388c089209e7040a6a42001d4b2270"
+  }
+}

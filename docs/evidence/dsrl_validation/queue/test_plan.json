@@ -1,0 +1,42 @@
+{
+  "written": "2026-11-28T22:34:54",
+  "note": "Written before any DSRL test episode was run. Validation finished 2026-11-28 01:11; selection.json in each run directory.",
+  "conditions": {
+    "primary": [
+      "0cm",
+      "+x2",
+      "-x2",
+      "+y2",
+      "-y2"
+    ],
+    "distance_4cm": [
+      "+x4",
+      "-x4",
+      "+y4",
+      "-y4"
+    ]
+  },
+  "episodes_per_condition": 50,
+  "eval_seed": 0,
+  "policy_action": "deterministic actor mean; post_perturb=policy",
+  "policies": {
+    "base": "base",
+    "gaussian": "gaussian",
+    "s42_val": "results/dsrl_train_v1_s42/checkpoints/ckpt_00001500.pt",
+    "s43_val_rule": "results/dsrl_train_v1_s43/checkpoints/ckpt_00000200.pt",
+    "s43_val_trained": "results/dsrl_train_v1_s43/checkpoints/ckpt_00001300.pt",
+    "s44_val": "results/dsrl_train_v1_s44/checkpoints/ckpt_00000700.pt",
+    "s42_final": "results/dsrl_train_v1_s42/checkpoints/ckpt_00002000.pt",
+    "s43_final": "results/dsrl_train_v1_s43/checkpoints/ckpt_00002000.pt",
+    "s44_final": "results/dsrl_train_v1_s44/checkpoints/ckpt_00002000.pt"
+  },
+  "roles": {
+    "base": "Frozen Base control (Gaussian initial noise from the episode seed)",
+    "gaussian": "untrained reference: random clipped Gaussian latent each decision",
+    "s42_val / s44_val": "validation-selected checkpoints (rule applied unchanged)",
+    "s43_val_rule": "seed 43 selection under the rule as written; this checkpoint has 0 SAC updates (warmup ends at decision 256)",
+    "s43_val_trained": "seed 43 selection if candidates with 0 SAC updates are excluded (analogue of the Residual rule excluding ckpt 1k)",
+    "s*_final": "last validation candidate (ckpt_00002000, ~19.7k control steps); secondary report"
+  },
+  "open_decision": "Which seed-43 checkpoint is the official one must be agreed with the Residual owner before seed-43 test numbers are read."
+}

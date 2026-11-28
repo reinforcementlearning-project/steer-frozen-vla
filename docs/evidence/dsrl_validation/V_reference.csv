@@ -1,0 +1,3 @@
+policy,succ_+x2,succ_-x2,succ_+y2,succ_-y2,score,perturbation_applied,mean_steps_when_success,failures_at_280_steps
+base,8,8,7,8,31,40,151.6,9
+gaussian,7,10,8,9,34,40,159.9,6

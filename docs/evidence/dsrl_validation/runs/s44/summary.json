@@ -1,0 +1,17 @@
+{
+  "control_steps": 20007,
+  "decisions": 2033,
+  "episodes": 107,
+  "grad_updates": 17780,
+  "vla_calls": 4095,
+  "metrics": {
+    "critic_loss": 0.002280940767377615,
+    "q1_mean": 1.3356302976608276,
+    "q_target_mean": 1.3393869400024414,
+    "actor_loss": -1.3700307607650757,
+    "entropy": 1.17277991771698,
+    "alpha": 0.009999999776482582
+  },
+  "actor_changed": true,
+  "vla_frozen": true
+}

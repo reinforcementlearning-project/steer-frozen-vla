@@ -1,0 +1,4 @@
+seed,control_steps,decisions,grad_updates,vla_calls,episodes,training_successes,entropy_min,entropy_final,q1_final,critic_loss_late,q1_mean_decisions_256_500,q1_mean_decisions_500_1000,q1_mean_decisions_1000_1500,q1_mean_decisions_1500_2100
+42,20002,2026,17710,4078,105,80,-0.59,2.07,1.27,0.0017,0.46,1.09,1.25,1.27
+43,20005,2026,17710,4082,103,74,0.09,1.07,1.31,0.0016,0.52,1.07,1.26,1.28
+44,20007,2033,17780,4095,107,79,-2.31,0.94,1.36,0.0018,0.47,1.07,1.23,1.3

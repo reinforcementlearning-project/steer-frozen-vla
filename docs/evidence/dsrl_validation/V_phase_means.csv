@@ -1,0 +1,6 @@
+phase,checkpoints,mean_score,mean_succ_+x2,mean_succ_-x2,mean_succ_+y2,mean_succ_-y2,mean_latent_offset_norm
+2k (0 updates),3,31.7,8.67,8.67,5.67,8.67,0.49
+3k-5k,9,28.2,7.33,7.56,6.67,6.67,1.48
+6k-10k,15,31.3,7,9.27,6.67,8.33,0.7
+11k-15k,15,31.9,7.4,9.47,6.53,8.53,0.69
+16k-20k,15,27.4,5.47,8.93,5.53,7.47,0.91

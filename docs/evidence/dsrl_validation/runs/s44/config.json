@@ -1,0 +1,70 @@
+{
+  "trainer": {
+    "total_env_steps": 20000,
+    "warmup_steps": 256,
+    "warmup_policy": "gaussian",
+    "learning_starts": 256,
+    "batch_size": 256,
+    "buffer_capacity": 100000,
+    "update_every": 1,
+    "utd_ratio": 10,
+    "log_every": 10,
+    "eval_every": 0,
+    "eval_episodes": 10,
+    "eval_seed": 10000,
+    "checkpoint_every": 100,
+    "keep_checkpoints": true,
+    "save_buffer": true,
+    "seed": 44,
+    "run_dir": "results/dsrl_train_v1_s44",
+    "success_key": "success",
+    "vla_calls_key": "vla_calls",
+    "episode_info_keys": [
+      "control_steps",
+      "perturb_step",
+      "perturb_dist",
+      "perturb_axis",
+      "perturb_sign"
+    ],
+    "verbose": true
+  },
+  "agent": {
+    "hidden_dims": [
+      256,
+      256
+    ],
+    "actor_lr": 0.0003,
+    "critic_lr": 0.0003,
+    "alpha_lr": 0.0003,
+    "gamma": 0.99,
+    "tau": 0.005,
+    "init_alpha": 0.01,
+    "autotune_alpha": false,
+    "target_entropy_scale": 1.0,
+    "actor_update_freq": 1,
+    "target_update_freq": 1,
+    "grad_clip_norm": null,
+    "device": "cuda"
+  },
+  "obs_dim": 15,
+  "action_spec": {
+    "dim": 6,
+    "low": [
+      -2.5,
+      -2.5,
+      -2.5,
+      -2.5,
+      -2.5,
+      -2.5
+    ],
+    "high": [
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5
+    ],
+    "name": "noise_latent"
+  }
+}
